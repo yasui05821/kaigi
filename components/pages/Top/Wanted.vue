@@ -53,16 +53,16 @@
     &:before {
       content: "";
       flex-grow: 1;
-      height: 1px;
+      height: 2px;
       background: #000;
-      margin:0 .4em;
+      margin-right:20px;
     }
     &:after {
       content: "";
       flex-grow: 1;
-      height: 1px;
+      height: 2px;
       background: #000;
-      margin:0 .4em;
+      margin-left:20px;
     }
   }
   &_icon {
