@@ -1,9 +1,9 @@
 <template>
   <div class="top-wanted container" style="width: 980px">
-    <h2 class="top-wanted_title mb-5">Wanted</h2>
+    <h2 class="top-wanted_title">Wanted</h2>
     <div class="top-wanted_content">
-      <div class="top-wanted_section">
-        <div class="top-wanted_icon mb-3">
+      <div class="top-wanted_section mt-5 mr-3">
+        <div class="top-wanted_icon  mb-3">
           <i class="material-icons">
             thumb_up
           </i>
@@ -14,7 +14,7 @@
           スポンサーに応募
         </a>
       </div>
-      <div class="top-wanted_section">
+      <div class="top-wanted_section mt-5 ml-3">
         <div class="top-wanted_icon mb-3">
           <i class="material-icons">
             mic
@@ -37,10 +37,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/library/_mixin.scss";
 .top-wanted {
   &_content {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 190px;
   }
@@ -78,16 +79,7 @@
     font-size: 1.4rem;
   }
   &_btn {
-    line-height:65px;
-    display: inline-block;
-    width: 300px;
-    height: 65px;
-    background:
-      -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
-    background-position: bottom left, bottom right, top right, top left;
-    background-size: 51% 51%;
-    background-repeat: no-repeat;
-    color: #ffffff;
+    @include btn
   }
   &_text {
     margin-bottom: 40px;
