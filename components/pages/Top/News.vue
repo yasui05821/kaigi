@@ -20,29 +20,12 @@
     }
 </script>
 
-<style lang="scss"scoped>
+<style lang="scss" scoped>
+  @import "~/assets/scss/library/_mixin.scss";
 .top-news {
-  margin-bottom: 164px;
+  padding-bottom: 164px;
   &_title {
-    font-family: 'Fugaz One', cursive;
-    font-size: 50px;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    &:before {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      background: #000;
-      margin-right:20px;
-    }
-    &:after {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      background: #000;
-      margin-left:20px;
-    }
+    @include secTitle
   }
 }
 </style>

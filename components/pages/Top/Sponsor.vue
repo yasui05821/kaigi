@@ -1,7 +1,7 @@
 <template>
-  <div class="top-sponsor">
-    <h2 class="top-sponsor_title"></h2>
-    <div class="top-sponsor_content">
+  <div class="top-sponsor container" style="width: 980px">
+    <h2 class="top-sponsor_title">Sponsor</h2>
+    <div class="top-sponsor_content ">
       <div class="top-sponsor_diamond">
         <div class="top-sponsor_icon"></div>
         <h3>ダイヤモンド</h3>
@@ -40,6 +40,11 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  @import "~/assets/scss/library/_mixin.scss";
+.top-sponsor {
+  &_title {
+    @include secTitle
+  }
+}
 </style>

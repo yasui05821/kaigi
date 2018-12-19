@@ -43,28 +43,10 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 190px;
+    padding-bottom: 190px;
   }
   &_title {
-    font-family: 'Fugaz One', cursive;
-    font-size: 50px;
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    &:before {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      background: #000;
-      margin-right:20px;
-    }
-    &:after {
-      content: "";
-      flex-grow: 1;
-      height: 2px;
-      background: #000;
-      margin-left:20px;
-    }
+    @include secTitle
   }
   &_icon {
     i {

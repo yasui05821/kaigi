@@ -16,3 +16,24 @@
   background-repeat: no-repeat;
   color: #ffffff;
 }
+@mixin secTitle {
+  font-family: 'Fugaz One', cursive;
+  font-size: 50px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;
+    margin-right:20px;
+  }
+  &:after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;
+    margin-left:20px;
+  }
+}
