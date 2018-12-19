@@ -56,7 +56,10 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-
+      config.module.rules.push({
+        test: /\.yml$/,
+        use: ['json-loader', 'yaml-loader']
+      })
     }
   }
 }

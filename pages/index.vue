@@ -4,7 +4,7 @@
     <sec-wanted></sec-wanted>
     <sec-news></sec-news>
     <sec-about></sec-about>
-    <sec-sponsor></sec-sponsor>
+    <sec-sponsor ></sec-sponsor>
     <p-footer></p-footer>
   </section>
 </template>
@@ -18,6 +18,14 @@ import secWanted from '~/components/pages/Top/Wanted.vue'
 import pFooter from '~/components/Footer.vue'
 
 export default {
+  // async asyncData({store}) {
+  //   const [sponsors] = await Promise.all([
+  //     store.dispatch("fetchSponsors")
+  //   ])
+  //   return {
+  //     sponsors
+  //   }
+  // },
   components: {
     secAbout,
     secHero,
