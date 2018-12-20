@@ -1,5 +1,5 @@
 <template>
-  <div class="top-news container" style="width: 980px">
+  <div class="top-news container" >
     <h2 class="top-news_title mb-5">News</h2>
     <div class="top-news_news mb-5">
       <p >2019.03.01　<a href="">WebサイトOPENしました！</a></p>
@@ -23,6 +23,8 @@
 <style lang="scss" scoped>
   @import "~/assets/scss/library/_mixin.scss";
 .top-news {
+  width: 100%;
+  max-width: 980px;
   padding-bottom: 164px;
   &_title {
     @include secTitle
