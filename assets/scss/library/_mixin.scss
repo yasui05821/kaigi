@@ -12,18 +12,21 @@
 @mixin btn {
   line-height:65px;
   display: inline-block;
-  width: 300px;
-  height: 65px;
+  width: 70%;
   background:
     -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
   background-position: bottom left, bottom right, top right, top left;
   background-size: 51% 51%;
   background-repeat: no-repeat;
   color: #ffffff;
+  @include media_desktop {
+    width: 300px;
+    height: 65px;
+  }
 }
 @mixin secTitle {
   font-family: 'Fugaz One', cursive;
-  font-size: 50px;
+  font-size: 3rem;
   font-weight: normal;
   display: flex;
   align-items: center;

@@ -1,8 +1,8 @@
 <template>
-  <div class="top-wanted container" style="width: 980px">
+  <div class="top-wanted container">
     <h2 class="top-wanted_title">Wanted</h2>
     <div class="top-wanted_content">
-      <div class="top-wanted_section mt-5 mr-3">
+      <div class="top-wanted_section mt-5 ">
         <div class="top-wanted_icon  mb-3">
           <i class="material-icons">
             thumb_up
@@ -14,7 +14,7 @@
           スポンサーに応募
         </a>
       </div>
-      <div class="top-wanted_section mt-5 ml-3">
+      <div class="top-wanted_section mt-5 ">
         <div class="top-wanted_icon mb-3">
           <i class="material-icons">
             mic
@@ -39,23 +39,34 @@
 <style lang="scss" scoped>
 @import "~/assets/scss/library/_mixin.scss";
 .top-wanted {
+  max-width: 980px;
+  width: 100%;
   &_content {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     padding-bottom: 190px;
+    @include media_desktop {
+       justify-content: space-between;
+    }
   }
   &_title {
     @include secTitle
   }
   &_icon {
     i {
-      font-size: 63px;
+      font-size: 5rem;
     }
   }
   &_section {
     text-align: center;
-    width: 430px;
+    width: 80%;
+    @include media_desktop {
+       width: 46%;
+       min-width: 320px;
+
+    }
+
   }
   &_subtitle {
     font-size: 1.4rem;
@@ -66,5 +77,6 @@
   &_text {
     margin-bottom: 40px;
   }
+
 }
 </style>

@@ -44,6 +44,7 @@
     padding-left:80px;
     img {
       border-radius: 20px;
+      width: 100%;
     }
   }
   &_overview{
