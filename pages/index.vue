@@ -4,7 +4,7 @@
     <sec-wanted></sec-wanted>
     <sec-news></sec-news>
     <sec-about></sec-about>
-    <!--<sec-sponsor ></sec-sponsor>-->
+    <sec-sponsor ></sec-sponsor>
     <p-footer></p-footer>
   </section>
 </template>

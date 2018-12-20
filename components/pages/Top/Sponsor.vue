@@ -1,5 +1,5 @@
 <template>
-  <div class="p-sponsor container" style="width: 980px">
+  <div class="p-sponsor container" >
     <h2 class="top-sponsor_title mb-5">Sponsor</h2>
     <div class="sponsorDiamond">
       <div class="sponsorDiamond_rank">Diamond</div>
@@ -212,6 +212,8 @@ export default {
   }
   // Diamond section
   .p-sponsor {
+    width: 100%;
+    max-width: 980px;
     .sponsorDiamond {
       @include space_rank
     }
