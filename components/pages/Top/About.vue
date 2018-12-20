@@ -1,5 +1,5 @@
 <template>
-  <div class="top-about container" style="width: 980px">
+  <div class="top-about container">
     <h2 class="top-about_title">About</h2>
     <div class="top-about_content">
       <div class="top-about_desc mt-5">
@@ -28,23 +28,37 @@
 <style lang="scss" scoped>
 @import "~/assets/scss/library/_mixin.scss";
 .top-about {
+  width: 100%;
+  max-width: 980px;
   &_title {
     @include secTitle
   }
   &_content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding-bottom: 170px;
   }
+  &_subtitle {
+    font-size: 1.5rem;
+  }
   &_desc {
-    width: 50%;
+    width: 80%;
+    @include media_desktop {
+      width: 50%;
+    }
   }
   &_details {
-    width: 50%;
-    padding-left:80px;
+    width: 80%;
+    font-size: 0.8rem;
     img {
       border-radius: 20px;
       width: 100%;
+    }
+    @include media_desktop {
+      padding-left:80px;
+      width: 50%;
+      font-size: 1rem;
     }
   }
   &_overview{
