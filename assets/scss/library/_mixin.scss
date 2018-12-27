@@ -1,0 +1,47 @@
+@mixin media_desktop(){
+  @media(min-width: 768px){
+    @content
+  }
+}
+@mixin space_section {
+  padding: 30px 0 40px;
+  @include media_desktop {
+    padding: 60px 0 80px;
+  }
+}
+@mixin btn {
+  line-height:65px;
+  display: inline-block;
+  width: 70%;
+  background:
+    -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px), -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
+  background-position: bottom left, bottom right, top right, top left;
+  background-size: 51% 51%;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  @include media_desktop {
+    width: 300px;
+    height: 65px;
+  }
+}
+@mixin secTitle {
+  font-family: 'Fugaz One', cursive;
+  font-size: 3rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;
+    margin-right:20px;
+  }
+  &:after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #000;
+    margin-left:20px;
+  }
+}
