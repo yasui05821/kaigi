@@ -1,7 +1,6 @@
 @import "~/node_modules/bootstrap/scss/bootstrap.scss";
 
-$clr-main: #F4D437;
-
+@import "./library/variable";
 :root{
   font-size: 10px;
 }

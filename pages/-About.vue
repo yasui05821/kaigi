@@ -34,7 +34,6 @@
 <style lang="scss" scoped>
 @import "~/assets/scss/library/_mixin.scss";
 .p-about {
-
   &-items {
     display: flex;
     flex-flow: row-reverse;
@@ -45,7 +44,10 @@
 }
 
 .p-aboutItem1 {
-  width: 41rem;
+  width: 100%;
+  @include media_desktop {
+    width: 41rem;
+  }
   &-photo{
     width: 100%;
     height: 25rem;
@@ -64,8 +66,11 @@
   }
   & dt{
     width: 5rem;
-    display: inline-block;
-    margin-bottom: 2rem;
+    display: block;
+    @include media_desktop {
+      display: inline-block;
+      margin-bottom: 2rem;
+    }
   }
   & dd{
     width: 35rem;
@@ -74,16 +79,26 @@
 }
 
 .p-aboutItem2{
-  width: 49rem;
+  width: 100%;
+  @include media_desktop {
+    width: 49rem;
+  }
   &-title{
-    font-size: 2.8rem;
-    margin-bottom: 5rem;
-
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    @include media_desktop {
+      margin-bottom: 5rem;
+      font-size: 2.8rem;
+    }
   }
   &-message{
-    font-size: 1.8rem;
-    line-height: 1.8;
     margin-bottom: 2rem;
+    @include media_desktop {
+      font-size: 1.8rem;
+      line-height: 1.8;
+      width: 49rem;
+    }
+
   }
 }
 
