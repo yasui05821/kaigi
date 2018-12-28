@@ -1,6 +1,7 @@
 <template>
   <section>
     <sec-hero></sec-hero>
+    <sec-tickets></sec-tickets>
     <sec-wanted></sec-wanted>
     <sec-news></sec-news>
     <sec-about></sec-about>
@@ -10,11 +11,12 @@
 </template>
 
 <script>
-import secAbout from '~/components/pages/Top/About.vue'
-import secHero from '~/components/pages/Top/Hero.vue'
-import secNews from '~/components/pages/Top/News.vue'
-import secSponsor from '~/components/pages/Top/Sponsor.vue'
-import secWanted from '~/components/pages/Top/Wanted.vue'
+import secAbout from './-About.vue'
+import secHero from './-Hero.vue'
+import secTickets from './-Tickets.vue'
+import secNews from './-News.vue'
+import secSponsor from './-Sponsor.vue'
+import secWanted from './-Wanted.vue'
 import pFooter from '~/components/Footer.vue'
 
 export default {
@@ -28,6 +30,7 @@ export default {
   // },
   components: {
     secAbout,
+    secTickets,
     secHero,
     secNews,
     secSponsor,

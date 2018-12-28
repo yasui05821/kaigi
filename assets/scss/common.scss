@@ -1,1 +1,39 @@
 @import "~/node_modules/bootstrap/scss/bootstrap.scss";
+
+$clr-main: #F4D437;
+
+:root{
+  font-size: 10px;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: $clr-main;
+}
+
+.container{
+  max-width: 980px;
+}
+
+// 横線付きタイトルコンポーネント
+.c-title{
+  font-family: 'Fugaz One', cursive;
+  font-size: 5rem;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  &:before {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #fff;
+    margin-right:20px;
+  }
+  &:after {
+    content: "";
+    flex-grow: 1;
+    height: 2px;
+    background: #fff;
+    margin-left:20px;
+  }
+}

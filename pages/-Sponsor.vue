@@ -212,8 +212,6 @@ export default {
   }
   // Diamond section
   .p-sponsor {
-    width: 100%;
-    max-width: 980px;
     .sponsorDiamond {
       @include space_rank
     }
