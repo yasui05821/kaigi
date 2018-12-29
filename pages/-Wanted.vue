@@ -40,15 +40,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @include media_desktop {
-      justify-content: space-between;
-    }
   }
 }
 .p-wantedItem {
   width: 43rem;
   text-align: center;
   padding-top: 5rem;
+  @include media_desktop {
+    width: 50%;
+    padding: 0 20px;
+  }
   &-icon {
     background: #FFF;
     width: 12rem;
