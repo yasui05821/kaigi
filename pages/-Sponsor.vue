@@ -1,6 +1,6 @@
 <template>
   <div class="p-sponsor container" >
-    <h2 class="top-sponsor_title mb-5">Sponsor</h2>
+    <h2 class="c-title mb-5">Sponsor</h2>
     <div class="sponsorDiamond">
       <div class="sponsorDiamond_rank">Diamond</div>
       <div class="sponsorList-diamond">
@@ -185,6 +185,7 @@ export default {
     font-size: 1rem;
     color: white;
     text-align: center;
+    text-decoration: none;
     position: relative;
     background: black;
     @include media_desktop {

@@ -12,6 +12,7 @@ body{
 
 a {
   color: $clr-accent;
+  text-decoration: underline;
 
   &:hover {
     color: $clr-accent;
@@ -24,7 +25,8 @@ a {
 }
 
 // 横線付きタイトルコンポーネント
-.c-title{
+.c-title {
+  margin-bottom: 40px;
   font-family: 'Fugaz One', cursive;
   font-size: 5rem;
   font-weight: normal;
@@ -33,15 +35,17 @@ a {
   &:before {
     content: "";
     flex-grow: 1;
-    height: 2px;
+    height: 3px;
     background: #fff;
     margin-right:20px;
+    border-radius: 9999px;
   }
   &:after {
     content: "";
     flex-grow: 1;
-    height: 2px;
+    height: 3px;
     background: #fff;
     margin-left:20px;
+    border-radius: 9999px;
   }
 }

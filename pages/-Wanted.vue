@@ -79,12 +79,13 @@
     margin-bottom: 3rem;
   }
   &-btn {
-    font-size: 2rem;
-    max-width: 80%;
-    line-height: 3;
     display: block;
     margin: 0 auto;
     width: 30rem;
+    max-width: 80%;
+    font-size: 2rem;
+    text-decoration: none;
+    line-height: 3;
     background:
       -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px),
       -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px),
@@ -94,6 +95,14 @@
     background-size: 51% 51%;
     background-repeat: no-repeat;
     color: #ffffff;
+
+    &:hover {
+      background:
+        -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px),
+        -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px),
+        -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px),
+        -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
+    }
   }
   &_text {
     margin-bottom: 40px;
