@@ -10,6 +10,15 @@ body{
   background-color: $clr-main;
 }
 
+a {
+  color: $clr-accent;
+
+  &:hover {
+    color: $clr-accent;
+  }
+
+}
+
 .container{
   max-width: 980px;
 }

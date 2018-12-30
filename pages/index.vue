@@ -1,6 +1,7 @@
 <template>
   <section>
     <sec-hero></sec-hero>
+    <sec-place></sec-place>
     <sec-tickets></sec-tickets>
     <sec-wanted></sec-wanted>
     <sec-news></sec-news>
@@ -11,8 +12,9 @@
 </template>
 
 <script>
-import secAbout from './-About.vue'
 import secHero from './-Hero.vue'
+import secPlace from './-Place.vue'
+import secAbout from './-About.vue'
 import secTickets from './-Tickets.vue'
 import secNews from './-News.vue'
 import secSponsor from './-Sponsor.vue'
@@ -29,9 +31,10 @@ export default {
   //   }
   // },
   components: {
+    secHero,
+    secPlace,
     secAbout,
     secTickets,
-    secHero,
     secNews,
     secSponsor,
     secWanted,
