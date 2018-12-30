@@ -56,12 +56,17 @@ export default {
 .p-header{
   position: fixed;
   z-index: 1000;
-  height: 7rem;
+  height: 50px;
   width: 100%;
   background: $clr-main;
-  padding-top: 1.6rem;
-  padding-bottom: 1.6rem;
-  border-bottom: 2px #fff solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 3px white solid;
+
+  @include media_desktop {
+    height: 60px;
+  }
+
   &-container{
     display: flex;
     flex-wrap: nowrap;
@@ -89,13 +94,22 @@ export default {
     display: inline-block;
     font-family: 'Fugaz One', cursive;
     padding: .5rem 3rem;
-    border-radius: 999rem;
     a{
-      color: #2c2c2c;
+      color: $clr-black;
+      text-decoration: none;
     }
   }
   &-item.active{
-    background: #FFF;
+    text-decoration: none;
+    background:
+      -webkit-linear-gradient(45deg, transparent 10px, white 10px),
+      -webkit-linear-gradient(135deg, transparent 10px, white 10px),
+      -webkit-linear-gradient(225deg, transparent 10px, white 10px),
+      -webkit-linear-gradient(315deg, transparent 10px, white 10px);
+    background-position: bottom left, bottom right, top right, top left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    color: white;
 
   }
 }

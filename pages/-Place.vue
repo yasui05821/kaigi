@@ -23,10 +23,14 @@
 
   .p-place {
     border-top: 4px solid white;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     width: 100%;
     text-align: center;
     font-size: 2rem;
+
+    @include media_desktop {
+      margin-bottom: 100px;
+    }
 
     @include media_desktop {
       font-size: 2.5rem;

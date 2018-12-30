@@ -3,6 +3,7 @@
     <no-ssr>
       <p-header></p-header>
     </no-ssr>
+    <p-share></p-share>
     <sec-hero></sec-hero>
     <sec-place></sec-place>
     <sec-tickets></sec-tickets>
@@ -23,6 +24,7 @@ import secNews from './-News.vue'
 import secSponsor from './-Sponsor.vue'
 import secWanted from './-Wanted.vue'
 import pHeader from '~/components/Header.vue'
+import pShare from '~/components/Share.vue'
 import pFooter from '~/components/Footer.vue'
 
 export default {
@@ -43,6 +45,7 @@ export default {
     secSponsor,
     secWanted,
     pHeader,
+    pShare,
     pFooter
   }
 }

@@ -15,8 +15,12 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
+
   .p-tickets {
+    @include space_section;
+
     &-soon{
       text-align: center;
       font-size: 2.5rem;
@@ -27,7 +31,6 @@
       text-align: center;
       font-size: 2rem;
       padding: 0 2rem;
-      margin-bottom: 17rem;
     }
 
   }

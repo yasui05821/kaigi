@@ -83,8 +83,8 @@
     transform: translateX(-50%);
 
     @include media_desktop {
-      height: 1030px;
-      padding-top: 80px;
+      height: 1100px;
+      padding-top: 110px;
       background-size: 65%;
     }
 
@@ -95,7 +95,7 @@
 
       @include media_desktop {
         margin: 0 auto 60px;
-        width: 550px;
+        max-width: 550px;
       }
      }
 

@@ -40,8 +40,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/library/_variable.scss";
 @import "~/assets/scss/library/_mixin.scss";
 .p-about {
+  @include space_section;
+
   &-items {
     display: flex;
     flex-flow: row-reverse;
@@ -52,7 +55,9 @@
 }
 
 .p-aboutItem1 {
+  margin-bottom: 50px;
   width: 100%;
+
   @include media_desktop {
     margin-left: 80px;
     width: 41rem;

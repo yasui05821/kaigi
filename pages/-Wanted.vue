@@ -33,9 +33,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/scss/library/_variable.scss";
 @import "~/assets/scss/library/_mixin.scss";
 .p-wanted{
-  margin-bottom: 19rem;
+  @include space_section;
+
   &-items {
     display: flex;
     flex-wrap: wrap;
@@ -45,7 +47,17 @@
 .p-wantedItem {
   width: 43rem;
   text-align: center;
-  padding-top: 5rem;
+
+  &:not(:last-of-type){
+    margin-bottom: 90px;
+
+    @include media_desktop {
+      margin-bottom: 0;
+    }
+
+  }
+
+
   @include media_desktop {
     width: 50%;
     padding: 0 20px;
@@ -87,21 +99,18 @@
     text-decoration: none;
     line-height: 3;
     background:
-      -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px),
-      -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px),
-      -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px),
-      -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
+      -webkit-linear-gradient(45deg, transparent 10px, $clr-black 10px),
+      -webkit-linear-gradient(135deg, transparent 10px, $clr-black 10px),
+      -webkit-linear-gradient(225deg, transparent 10px, $clr-black 10px),
+      -webkit-linear-gradient(315deg, transparent 10px, $clr-black 10px);
     background-position: bottom left, bottom right, top right, top left;
     background-size: 51% 51%;
     background-repeat: no-repeat;
     color: #ffffff;
 
     &:hover {
-      background:
-        -webkit-linear-gradient(45deg, transparent 10px, #2c2c2c 10px),
-        -webkit-linear-gradient(135deg, transparent 10px, #2c2c2c 10px),
-        -webkit-linear-gradient(225deg, transparent 10px, #2c2c2c 10px),
-        -webkit-linear-gradient(315deg, transparent 10px, #2c2c2c 10px);
+      opacity: .9;
+      text-decoration: underline;
     }
   }
   &_text {

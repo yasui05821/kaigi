@@ -1,6 +1,8 @@
 @import "~/node_modules/bootstrap/scss/bootstrap.scss";
 
 @import "./library/variable";
+@import "./library/mixin";
+
 :root{
   font-size: 10px;
 }
@@ -28,10 +30,15 @@ a {
 .c-title {
   margin-bottom: 40px;
   font-family: 'Fugaz One', cursive;
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: normal;
   display: flex;
   align-items: center;
+
+  @include media_desktop {
+    font-size: 5rem;
+  }
+
   &:before {
     content: "";
     flex-grow: 1;

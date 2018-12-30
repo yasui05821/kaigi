@@ -213,6 +213,8 @@ export default {
   }
   // Diamond section
   .p-sponsor {
+    @include space_section;
+
     .sponsorDiamond {
       @include space_rank
     }
@@ -385,10 +387,7 @@ export default {
       width: 100%;
     }
     .sponsorList-beer_item{
-      margin-right: 10px;
-      margin-bottom: 20px;
       @include media_desktop {
-        margin-bottom: 30px;
         width: calc((100% - 160px) / 5);
         &:nth-of-type(1n) {
           margin-right: 0;
