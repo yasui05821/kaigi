@@ -34,20 +34,26 @@
               <li>
                 <span class="p-info-date">3.29</span>
                 <span class="p-info-week"><em>金</em></span>
-                <span class="p-info-time">16:00-</span>
-                <span class="p-info-subject">前夜祭</span>
+                <div class="p-info-detail">
+                  <span class="p-info-time">16:00-</span>
+                  <span class="p-info-subject">前夜祭</span>
+                </div>
               </li>
               <li>
                 <span class="p-info-date">3.30</span>
                 <span class="p-info-week"><em>土</em></span>
-                <span class="p-info-time">10:00-</span>
-                <span class="p-info-subject">本編１日目</span>
+                <div class="p-info-detail">
+                  <span class="p-info-time">10:00-</span>
+                  <span class="p-info-subject">本編１日目</span>
+                </div>
               </li>
               <li>
                 <span class="p-info-date">3.31</span>
                 <span class="p-info-week"><em>日</em></span>
-                <span class="p-info-time">10:00-</span>
-                <span class="p-info-subject">本編２日目</span>
+                <div class="p-info-detail">
+                  <span class="p-info-time">10:00-</span>
+                  <span class="p-info-subject">本編２日目</span>
+                </div>
               </li>
             </ul>
         </div>
@@ -67,157 +73,286 @@
   @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
   .p-hero {
-    max-width: 2500px;
-    padding-top: 80px;
-    height: 1030px;
+    padding-top: 60px;
+    height: 750px;
     background-image: url("~assets/images/pattern.png");
-    background-size: 65%;
+    background-size: 100%;
     text-align: center;
     position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include media_desktop {
+      height: 1100px;
+      padding-top: 110px;
+      background-size: 65%;
+    }
 
     &-title {
-      margin: 0 auto 60px;
-      width: 550px;
+      margin: 0 auto 30px;
+      width: 80%;
+
+
+      @include media_desktop {
+        margin: 0 auto 60px;
+        max-width: 550px;
+      }
      }
 
     &-sns {
       display: inline-flex;
+      margin: 0 auto 20px;
+      padding: 10px 25px 15px 20px;
       align-items: center;
       border-radius: 9999px;
-      margin: 0 auto 80px;
-      padding: 15px 40px;
       background: white;
+
+      @include media_desktop {
+        margin: 0 auto 80px;
+        padding: 15px 40px;
+      }
      }
     &-snsIcon {
       display: inline-block;
       color: $clr-black;
-      font-size: 3rem;
+      font-size: 2rem;
+
+      @include media_desktop {
+        font-size: 3rem;
+      }
+
      }
     &-snsGroup {
       display: inline-flex;
-      margin-left: 30px;
+      margin-left: 8px;
       color: #A3A3A3;
+
+      @include media_desktop {
+        margin-left: 30px;
+      }
+
      }
     &-hash {
       text-align: center;
       span {
         display: block;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: -3px;
+
+        @include media_desktop {
+          font-size: 1.4rem;
+        }
       }
       a {
         display: block;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+
+        @include media_desktop {
+          font-size: 2rem;
+        }
       }
     }
     &-follow {
-      margin-left: 30px;
+      margin-left: 15px;
       text-align: center;
+
+      @include media_desktop {
+        margin-left: 30px;
+      }
+
       span {
         display: block;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-bottom: -3px;
+
+        @include media_desktop {
+          font-size: 1.4rem;
+        }
       }
       a {
         display: block;
-        font-size: 2rem;
+        font-size: 1.8rem;
+        text-decoration: none;
 
+        @include media_desktop {
+          font-size: 2rem;
+        }
       }
     }
   }
   .p-info {
-    width: 100%;
-    max-width: 980px;
     border-radius: 30px 30px 0 0;
     border: 4px solid white;
     border-bottom: none;
-    padding: 60px 20px 0px;
+    padding: 30px 10px 0px;
+    width: calc(100% - 20px);
     position: absolute;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     background: $clr-main;
+    box-sizing: border-box;
+
+    @include media_desktop {
+      padding: 60px 20px 0px;
+      width: 100%;
+      max-width: 980px;
+    }
 
     &-catch {
-      margin-bottom: 2em;
-      font-size: 2.5rem;
+      margin-bottom: 1em;
+      font-size: 1.8rem;
+      line-height: 1.5;
       font-weight: bold;
       letter-spacing: 3px;
+
+      @include media_desktop {
+        margin-bottom: 2em;
+        font-size: 2.5rem;
+      }
     }
 
     &-sumally {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
+
+      @include media_desktop {
+        justify-content: center;
+      }
     }
 
     &-total{
-      width: 120px;
-      height: 120px;
-      font-size: 1.7rem;
+      margin-left: 5px;
+      width: 90px;
+      height: 90px;
+      font-size: 1.5rem;
       letter-spacing: -1px;
       border-radius: 50%;
       background: white;
+
+
+      @include media_desktop {
+        margin-left: 0;
+        width: 120px;
+        height: 120px;
+        font-size: 1.7rem;
+      }
+
       span {
         display: inline-block;
-        transform: translateY(56%);
+        transform: translateY(46%);
         line-height: 1.5;
+        @include media_desktop {
+          transform: translateY(56%);
+        }
       }
       em {
-        font-size: 2rem;
+        font-size:  1.7rem;
         font-weight: bold;
         font-style: normal;
         letter-spacing: -.2em;
+
+        @include media_desktop {
+          font-size: 2rem;
+        }
       }
 
     }
     &-schedule{
-      margin-left: 50px;
-      font-size: 4rem;
-      font-weight: normal;
+      margin-left: 20px;
       text-align: left;
+      flex-grow: 1;
+
+      @include media_desktop {
+        margin-left: 50px;
+        flex-grow: 0;
+      }
+
       ul {
         padding: 0;
         list-style: none;
       }
       li {
-        margin-bottom: .5rem;
+          margin-bottom: 1rem;
+
+        @include media_desktop {
+          margin-bottom: .5rem;
+        }
       }
     }
     &-date{
       display: inline-block;
       margin-right: 3px;
-      width: 84px;
+      width: 60px;
+      font-size: 2.8rem;
+      font-weight: normal;
+
+      @include media_desktop {
+        width: 84px;
+        font-size: 4rem;
+      }
 
     }
     &-week {
       display: inline-block;
       margin-right: 5px;
       border-radius: 50%;
-      width: 35px;
-      height: 35px;
+      width: 28px;
+      height: 28px;
       color: white;
-      vertical-align: -13px;
+      vertical-align: 6px;
       text-align: center;
       background: $clr-black;
+
+      @include media_desktop {
+        width: 35px;
+        height: 35px;
+        vertical-align: 13px;
+      }
+
       em {
         display: inline-block;
-        font-size: 1.8rem;
-        font-weight: normal;
+        font-size: 1.6rem;
+        font-weight: bold;
         font-style: normal;
-        transform: translateY(-21px);
+        transform: translateY(1px);
+
+        @include media_desktop {
+          font-size: 1.8rem;
+          font-weight: normal;
+          transform: translateY(3px);
+        }
+
       }
 
     }
+    &-detail {
+      display: block;
+
+      @include media_desktop {
+        display: inline-block;
+      }
+    }
+
     &-time {
       display: inline-block;
       margin-right: 8px;
-      font-size: 1.8rem;
-      vertical-align: 8px;
+      font-size: 1.4rem;
+      vertical-align: 9px;
 
+      @include media_desktop {
+        font-size: 1.8rem;
+      }
     }
     &-subject {
-      font-size: 3rem;
+      font-size: 2rem;
+      vertical-align: 6px;
+
+      @include media_desktop {
+        font-size: 3rem;
+      }
     }
   }
 

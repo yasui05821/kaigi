@@ -55,7 +55,7 @@
 $clr-footer:#2D2C2F;
 
 .p-toTop{
-  border-top: 2px #FFF solid;
+  border-top: 3px #FFF solid;
   background-image: url("~assets/images/pattern.png");
   height: 18rem;
   position: relative;
@@ -69,6 +69,7 @@ $clr-footer:#2D2C2F;
     margin-left: -5rem; // to put this center
     left:50%;
     bottom: -2rem;
+    cursor: pointer;
     background:
       -webkit-linear-gradient(45deg, transparent 10px, #2D2C2F 10px),
       -webkit-linear-gradient(135deg, transparent 10px, #2D2C2F 10px),
@@ -83,7 +84,7 @@ $clr-footer:#2D2C2F;
   &-nobImg{
     display: block;
     width: 7.5rem;
-    margin: 1.5rem auto;
+    margin: .5rem auto;
   }
 
 }
@@ -118,7 +119,12 @@ $clr-footer:#2D2C2F;
     width: 25rem;
   }
   &-past{
-    margin: 2rem 0;
+    margin: 2rem 0 3rem;
+    text-align: center;
+
+    @include media_desktop {
+      text-align: left;
+    }
   }
   &-baloon{
     position: relative;

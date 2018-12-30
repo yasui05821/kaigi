@@ -37,9 +37,11 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
 .p-news {
-  margin-bottom: 15rem;
+  @include space_section;
+
   &-items{
     margin-top: 4rem;
   }
@@ -47,14 +49,23 @@
     margin-bottom: 2rem;
   }
   &-date{
-    display: inline-block;
-    padding-right: 2rem;
+    display: block;
+
+    @include media_desktop {
+      display: inline-block;
+    }
   }
   &-socialArea{
-    background: #FFF;
-    padding: 1rem 2rem;
     border-radius: 999px;
     margin-top: 6rem;
+    padding: 2rem;
+    background: white;
+
+    @include media_desktop {
+      padding: 1rem 2rem;
+    }
+
+
   }
   &-socialIcon{
 

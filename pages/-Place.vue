@@ -23,25 +23,44 @@
 
   .p-place {
     border-top: 4px solid white;
-    margin-bottom: 100px;
+    margin-bottom: 60px;
     width: 100%;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
+
+    @include media_desktop {
+      margin-bottom: 100px;
+    }
+
+    @include media_desktop {
+      font-size: 2.5rem;
+    }
 
     &-contents {
-      padding-top: 35px;
-      transform: translate(-50%,-3px);
-      width: 980px;
+      padding-top: 20px;
+      transform: translate(-50%,-5px);
+      width: calc(100% - 28px);
+      max-width: calc(980px - 8px);
       background: $clr-main;
       position: relative;
       left: 50% ;
       z-index: 10;
+
+      @include media_desktop {
+        padding-top: 35px;
+        width: calc(100% - 8px);
+      }
     }
 
     &-icon {
       display: inline-block;
-      font-size: 3rem;
-      transform: translateY(5px);
+      font-size: 2rem;
+      transform: translateY(4px);
+
+      @include media_desktop{
+        font-size: 3rem;
+        transform: translateY(5px);
+      }
 
     }
   }
