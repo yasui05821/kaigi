@@ -3,17 +3,25 @@
     <h2 class="c-title">About</h2>
     <div class="p-about-items">
       <div class="p-aboutItem1">
-        <img class="p-aboutItem1-photo" src="https://placehold.jp/1000x1000.png" alt="">
+        <img class="p-aboutItem1-photo" src="~/assets/images/about.jpg" alt="">
         <h3 class="p-aboutItem1-title">開催概要</h3>
         <dl>
-          <dt>開催：</dt>
-          <dd>2019年3月29日（金）〜3月31日（日）</dd>
-          <dt>場所：</dt>
-          <dd>練馬区立区民・産業プラザ Coconeriホール</dd>
-          <dt>対象：</dt>
-          <dd>PHP関連エンジニア 最大400名</dd>
-          <dt>主催：</dt>
-          <dd>PHPerKaigi 2019 実行委員会</dd>
+          <div class="p-aboutItem1-row">
+            <dt>開催：</dt>
+            <dd>2019年3月29日（金）〜3月31日（日）</dd>
+          </div>
+          <div class="p-aboutItem1-row">
+            <dt>場所：</dt>
+            <dd>練馬区立区民・産業プラザ Coconeriホール</dd>
+          </div>
+          <div class="p-aboutItem1-row">
+            <dt>対象：</dt>
+            <dd>PHP関連エンジニア 最大400名</dd>
+          </div>
+          <div class="p-aboutItem1-row">
+            <dt>主催：</dt>
+            <dd>PHPerKaigi 2019 実行委員会</dd>
+          </div>
         </dl>
       </div>
       <div class="p-aboutItem2">
@@ -46,11 +54,11 @@
 .p-aboutItem1 {
   width: 100%;
   @include media_desktop {
+    margin-left: 80px;
     width: 41rem;
   }
   &-photo{
     width: 100%;
-    height: 25rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
     border-radius: 2rem;
@@ -61,15 +69,17 @@
     margin-bottom: 2rem;
   }
   & dl{
+  }
+  &-row {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 2px;
   }
   & dt{
     width: 5rem;
     display: block;
     @include media_desktop {
       display: inline-block;
-      margin-bottom: 2rem;
     }
   }
   & dd{
@@ -81,7 +91,7 @@
 .p-aboutItem2{
   width: 100%;
   @include media_desktop {
-    width: 49rem;
+    width: calc(100% - 41rem - 80px);
   }
   &-title{
     font-size: 2.5rem;
@@ -96,7 +106,6 @@
     @include media_desktop {
       font-size: 1.8rem;
       line-height: 1.8;
-      width: 49rem;
     }
 
   }

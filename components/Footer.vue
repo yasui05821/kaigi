@@ -1,15 +1,15 @@
 <template>
   <section>
     <section class="p-toTop">
-      <div class="p-toTop-nob">
-        <img class="p-toTop-nobImg" src="https://placehold.it/200x100" alt="">
-      </div>
+      <button class="p-toTop-nob" type="button">
+        <img class="p-toTop-nobImg" src="~/assets/images/pageTop.png" alt="Page Top">
+      </button>
     </section>
     <footer class="p-footer">
       <div class="container">
         <div class="p-footer-items">
           <div class="p-footerLogo">
-            <img class="p-footerLogo-logo" src="https://placehold.it/800x200" alt="">
+            <img class="p-footerLogo-logo" src="~/assets/images/textLogo-white.svg" alt="PHPerKaigi 2019">
             <div class="p-footerLogo-past">
               <span>
                 過去の開催
@@ -22,7 +22,7 @@
           <div class="p-footerLinks">
             <ul class="p-footerLinks-links">
               <li class="p-footerLinks-link">
-                <a href="">お問い合わせ</a>
+                <a href="">お問い合わせ（twitter）</a>
               </li>
               <li class="p-footerLinks-link">
                 <a href="">行動規範</a>
@@ -32,8 +32,10 @@
         </div>
         <div class="p-footerCredit">
           <div>Powered by</div>
-          <img class="p-footerCredit-logo" src="https://placehold.it/800x200" alt="">
-          <img class="p-footerCredit-logo" src="https://placehold.it/800x200" alt="">
+          <img class="p-footerCredit-logo" src="~/assets/images/poweredBy.svg" alt="builderscon">
+          <p class="p-footerCopyright">
+            <small>©  PHPerKaigi 2019.</small>
+          </p>
         </div>
       </div>
     </footer>
@@ -54,9 +56,11 @@ $clr-footer:#2D2C2F;
 
 .p-toTop{
   border-top: 2px #FFF solid;
-  background-image: url("https://placehold.it/200x200");
-  height: 15rem;
+  background-image: url("~assets/images/pattern.png");
+  height: 18rem;
   position: relative;
+  background-position: 0 60px;
+  background-size: 830px auto;
 
   &-nob{
     position: absolute;
@@ -65,13 +69,21 @@ $clr-footer:#2D2C2F;
     margin-left: -5rem; // to put this center
     left:50%;
     bottom: -2rem;
-    background: $clr-footer;
+    background:
+      -webkit-linear-gradient(45deg, transparent 10px, #2D2C2F 10px),
+      -webkit-linear-gradient(135deg, transparent 10px, #2D2C2F 10px),
+      -webkit-linear-gradient(225deg, transparent 10px, #2D2C2F 10px),
+      -webkit-linear-gradient(315deg, transparent 10px, #2D2C2F 10px);
+    background-position: bottom left, bottom right, top right, top left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    border: 0;
   }
 
   &-nobImg{
     display: block;
     width: 7.5rem;
-    margin: 2rem auto;
+    margin: 1.5rem auto;
   }
 
 }
@@ -109,11 +121,34 @@ $clr-footer:#2D2C2F;
     margin: 2rem 0;
   }
   &-baloon{
-    background: $clr-main;
+    position: relative;
+    margin-left: 10px;
     padding: .5rem 1rem;
     border-radius: 0.5rem;
+    background:
+      -webkit-linear-gradient(45deg, transparent 4px, $clr-main 4px),
+      -webkit-linear-gradient(135deg, transparent 4px, $clr-main 4px),
+      -webkit-linear-gradient(225deg, transparent 4px, $clr-main 4px),
+      -webkit-linear-gradient(315deg, transparent 4px, $clr-main 4px);
+    background-position: bottom left, bottom right, top right, top left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 5px;
+      height: 5px;
+      background-color: $clr-main;
+      transform: translate(-50%, -50%) rotateZ(45deg);
+      content: '';
+    }
     a{
       color: $clr-footer;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -129,6 +164,10 @@ $clr-footer:#2D2C2F;
     margin-bottom: 2rem;
     a{
       color: $clr-main;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
@@ -138,11 +177,13 @@ $clr-footer:#2D2C2F;
   text-align: center;
   &-logo{
     display: block;
-    width: 15.5rem;
+    width: 20rem;
     margin: 0 auto;
     margin-top: 1rem;
-    margin-bottom: 5rem;
   }
+}
 
+.p-footerCopyright{
+  margin: 4rem 0;
 }
 </style>

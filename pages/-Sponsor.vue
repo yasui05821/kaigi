@@ -158,7 +158,7 @@ export default {
     display: block;
     margin-bottom: .5em;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: normal;
     letter-spacing: 1px;
     text-align: center;
