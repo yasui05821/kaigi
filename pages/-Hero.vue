@@ -72,20 +72,65 @@
 <style lang="scss" scoped>
   @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
+
+  @keyframes slide {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 415px;
+    }
+  }
+
+  @keyframes slide-desktop {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 830px;
+    }
+  }
+
   .p-hero {
+    position: relative;
+    z-index: 0;
     padding-top: 60px;
     height: 750px;
-    background-image: url("~assets/images/pattern.png");
-    background-size: 100%;
+    background-image: url("~assets/images/heroPattern_01.png"),
+                      url("~assets/images/heroPattern_03.png");
+    background-position: center;
+    background-size: 415px auto;
     text-align: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    animation: slide 30s linear infinite;
 
     @include media_desktop {
       height: 1100px;
       padding-top: 110px;
-      background-size: 65%;
+      background-size: 830px auto;
+      animation: slide-desktop 40s linear infinite;
+    }
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-image: url("~assets/images/heroPattern_02.png"),
+                        url("~assets/images/heroPattern_04.png");
+      background-position: center;
+      background-size: 415px auto;
+      content: '';
+      animation: slide 30s linear infinite reverse;
+
+      @include media_desktop {
+        background-size: 830px auto;
+        animation: slide-desktop 40s linear infinite reverse;
+      }
     }
 
     &-title {
