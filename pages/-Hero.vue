@@ -1,5 +1,5 @@
 <template>
-  <section class="p-hero">
+  <section class="p-hero" :class="{ 'is-active': isActive }">
     <div class="container">
       <h1 class="p-hero-title">
         <img src="~assets/images/logo.svg" alt="PHPerKaigi2019">
@@ -64,9 +64,38 @@
 </template>
 
 <script>
-    export default {
-        name: "Hero"
+  import anime from 'animejs'
+
+  export default {
+    name: "Hero",
+    data: () => ({
+      isActive: false
+    }),
+    methods: {
+      activate() {
+        this.isActive = true
+      },
+      deactivate() {
+        this.isActive = false
+      },
+      animateTitle() {
+        anime({
+          targets: this.$el.querySelector('.p-hero-title img'),
+          scale: [0, 1],
+          duration: 1000,
+          elasticity: 300
+        })
+      }
+    },
+    mounted() {
+      window.addEventListener('load', this.activate)
+      window.addEventListener('load', this.animateTitle)
+    },
+    destroyed() {
+      window.removeEventListener('load', this.deactivate)
+      window.removeEventListener('load', this.animateTitle)
     }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -96,40 +125,65 @@
     z-index: 0;
     padding-top: 60px;
     height: 750px;
-    background-image: url("~assets/images/heroPattern_01.png"),
-                      url("~assets/images/heroPattern_03.png");
-    background-position: center;
-    background-size: 415px auto;
     text-align: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    animation: slide 30s linear infinite;
 
     @include media_desktop {
       height: 1100px;
       padding-top: 110px;
-      background-size: 830px auto;
-      animation: slide-desktop 40s linear infinite;
     }
 
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
       top: 0;
       right: 0;
       bottom: 0;
       left: 0;
       z-index: -1;
-      background-image: url("~assets/images/heroPattern_02.png"),
-                        url("~assets/images/heroPattern_04.png");
       background-position: center;
       background-size: 415px auto;
       content: '';
-      animation: slide 30s linear infinite reverse;
+      opacity: 0;
+      transition: opacity 0.5s linear 1s;
 
       @include media_desktop {
         background-size: 830px auto;
-        animation: slide-desktop 40s linear infinite reverse;
+      }
+    }
+
+    &::before {
+      background-image: url("~assets/images/heroPattern_01.png"),
+                        url("~assets/images/heroPattern_03.png");
+    }
+
+    &::after {
+      background-image: url("~assets/images/heroPattern_02.png"),
+                        url("~assets/images/heroPattern_04.png");
+    }
+
+    &.is-active{
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        animation: slide 30s linear infinite;
+
+        @include media_desktop {
+          animation: slide-desktop 40s linear infinite;
+        }
+      }
+
+      &::after {
+        animation: slide 30s linear infinite reverse;
+
+        @include media_desktop {
+          animation: slide-desktop 40s linear infinite reverse;
+        }
       }
     }
 
@@ -141,6 +195,10 @@
       @include media_desktop {
         margin: 0 auto 60px;
         max-width: 550px;
+      }
+
+      img {
+        transform: scale(0);
       }
      }
 

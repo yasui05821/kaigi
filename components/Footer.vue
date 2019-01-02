@@ -60,7 +60,11 @@ $clr-footer:#2D2C2F;
   height: 18rem;
   position: relative;
   background-position: 0 60px;
-  background-size: 830px auto;
+  background-size: 415px auto;
+
+  @include media_desktop {
+    background-size: 830px auto;
+  }
 
   &-nob{
     position: absolute;
