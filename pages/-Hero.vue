@@ -1,5 +1,5 @@
 <template>
-  <section class="p-hero">
+  <section class="p-hero" :class="{ 'is-active': isActive }">
     <div class="container">
       <h1 class="p-hero-title">
         <img src="~assets/images/logo.svg" alt="PHPerKaigi2019">
@@ -64,28 +64,125 @@
 </template>
 
 <script>
-    export default {
-        name: "Hero"
+  import anime from 'animejs'
+
+  export default {
+    name: "Hero",
+    data: () => ({
+      isActive: false
+    }),
+    methods: {
+      activate() {
+        this.isActive = true
+      },
+      deactivate() {
+        this.isActive = false
+      },
+      animateTitle() {
+        anime({
+          targets: this.$el.querySelector('.p-hero-title img'),
+          scale: [0, 1],
+          duration: 1000,
+          elasticity: 300
+        })
+      }
+    },
+    mounted() {
+      window.addEventListener('load', this.activate)
+      window.addEventListener('load', this.animateTitle)
+    },
+    destroyed() {
+      window.removeEventListener('load', this.deactivate)
+      window.removeEventListener('load', this.animateTitle)
     }
+  }
 </script>
 
 <style lang="scss" scoped>
   @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
+
+  @keyframes slide {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 415px;
+    }
+  }
+
+  @keyframes slide-desktop {
+    from {
+      background-position-x: 0%;
+    }
+    to {
+      background-position-x: 830px;
+    }
+  }
+
   .p-hero {
+    position: relative;
+    z-index: 0;
     padding-top: 60px;
-    height: 750px;
-    background-image: url("~assets/images/pattern.png");
-    background-size: 100%;
     text-align: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 
     @include media_desktop {
-      height: 1100px;
       padding-top: 110px;
-      background-size: 65%;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      background-position: center;
+      background-size: 415px auto;
+      content: '';
+      opacity: 0;
+      transition: opacity 0.5s linear 1s;
+
+      @include media_desktop {
+        background-size: 830px auto;
+      }
+    }
+
+    &::before {
+      background-image: url("~assets/images/heroPattern_01.png"),
+                        url("~assets/images/heroPattern_03.png");
+    }
+
+    &::after {
+      background-image: url("~assets/images/heroPattern_02.png"),
+                        url("~assets/images/heroPattern_04.png");
+    }
+
+    &.is-active{
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+
+      &::before {
+        animation: slide 30s linear infinite;
+
+        @include media_desktop {
+          animation: slide-desktop 40s linear infinite;
+        }
+      }
+
+      &::after {
+        animation: slide 30s linear infinite reverse;
+
+        @include media_desktop {
+          animation: slide-desktop 40s linear infinite reverse;
+        }
+      }
     }
 
     &-title {
@@ -96,6 +193,10 @@
       @include media_desktop {
         margin: 0 auto 60px;
         max-width: 550px;
+      }
+
+      img {
+        transform: scale(0);
       }
      }
 
@@ -186,11 +287,6 @@
     border: 4px solid white;
     border-bottom: none;
     padding: 30px 10px 0px;
-    width: calc(100% - 20px);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     background: $clr-main;
     box-sizing: border-box;
 
@@ -224,7 +320,7 @@
     }
 
     &-total{
-      margin-left: 5px;
+      flex-shrink: 0;
       width: 90px;
       height: 90px;
       font-size: 1.5rem;

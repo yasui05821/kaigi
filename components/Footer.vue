@@ -1,9 +1,9 @@
 <template>
   <section>
     <section class="p-toTop">
-      <button class="p-toTop-nob" type="button">
+      <a class="p-toTop-nob" href="#top">
         <img class="p-toTop-nobImg" src="~/assets/images/pageTop.png" alt="Page Top">
-      </button>
+      </a>
     </section>
     <footer class="p-footer">
       <div class="container">
@@ -43,9 +43,19 @@
 </template>
 
 <script>
-    export default {
-        name: "Footer"
+  export default {
+    name: "Footer",
+    mounted() {
+      this.$nextTick(() => {
+        const scroll = this.$SmoothScroll('a[href="#top"]', {
+          header: '.p-header',
+          speed: 1000,
+          speedAsDuration: true,
+          updateURL: false
+        })
+      })
     }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +70,11 @@ $clr-footer:#2D2C2F;
   height: 18rem;
   position: relative;
   background-position: 0 60px;
-  background-size: 830px auto;
+  background-size: 415px auto;
+
+  @include media_desktop {
+    background-size: 830px auto;
+  }
 
   &-nob{
     position: absolute;
