@@ -1,7 +1,7 @@
 <template>
   <section>
     <section class="p-toTop">
-      <a class="p-toTop-nob" href="#top">
+      <a class="p-toTop-nob" tabindex="" @click="scroll">
         <img class="p-toTop-nobImg" src="~/assets/images/pageTop.png" alt="Page Top">
       </a>
     </section>
@@ -43,17 +43,15 @@
 </template>
 
 <script>
+  import VueScrollTo from "vue-scrollto"
+
   export default {
     name: "Footer",
-    mounted() {
-      this.$nextTick(() => {
-        const scroll = this.$SmoothScroll('a[href="#top"]', {
-          header: '.p-header',
-          speed: 1000,
-          speedAsDuration: true,
-          updateURL: false
-        })
-      })
+    mounted() {},
+    methods:{
+      scroll(){
+        VueScrollTo.scrollTo(document.getElementsByTagName("html"),500)
+      }
     }
   }
 </script>

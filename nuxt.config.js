@@ -39,15 +39,19 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [
-    { src: '~/plugins/smooth-scroll', ssr: false }
-  ],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
+    "@nuxtjs/axios"
   ],
+
+  axios: {
+    baseURL: "https://fortee.jp/phperkaigi-2019/api/",
+    debug: process.env.NODE_ENV !== "production"
+  },
 
   /*
   ** Build configuration
