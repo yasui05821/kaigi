@@ -39,8 +39,8 @@
     &-contents {
       padding-top: 20px;
       transform: translate(-50%,-5px);
-      width: calc(100% - 28px);
-      max-width: calc(980px - 8px);
+      width: calc(100% - 38px);
+      max-width: calc(980px - 38px);
       background: $clr-main;
       position: relative;
       left: 50% ;
@@ -48,7 +48,6 @@
 
       @include media_desktop {
         padding-top: 35px;
-        width: calc(100% - 8px);
       }
     }
 

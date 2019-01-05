@@ -124,14 +124,12 @@
     position: relative;
     z-index: 0;
     padding-top: 60px;
-    height: 750px;
     text-align: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
 
     @include media_desktop {
-      height: 1100px;
       padding-top: 110px;
     }
 
@@ -289,11 +287,6 @@
     border: 4px solid white;
     border-bottom: none;
     padding: 30px 10px 0px;
-    width: calc(100% - 20px);
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     background: $clr-main;
     box-sizing: border-box;
 
@@ -327,7 +320,7 @@
     }
 
     &-total{
-      margin-left: 5px;
+      flex-shrink: 0;
       width: 90px;
       height: 90px;
       font-size: 1.5rem;
