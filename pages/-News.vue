@@ -8,14 +8,14 @@
         :key="index"
       >
         <span class="p-news-date">2019.03.01</span>
-      　<a class="p-news-link" href="">WebサイトOPENしました！</a>
+      　<span>WebサイトOPENしました！</span>
       </p>
     </div>
     <p class="p-news-socialArea">
       <span class="p-news-socialIcon">
         <i class="fab fa-twitter mr-3"></i>
       </span>
-      <a href="">PHPerKaigi公式アカウント</a>
+      <a href="https://twitter.com/phperkaigi" target="_blank">PHPerKaigi公式アカウント</a>
       も最新情報を発信しています！ぜひフォローしてみてください。
     </p>
   </section>
@@ -27,9 +27,7 @@
       data(){
           return {
             news: [
-              { date: "2019.03.01", link:"", message: "WebサイトOPENしました！"},
-              { date: "2019.03.01", link:"", message: "WebサイトOPENしました！"},
-              { date: "2019.03.01", link:"", message: "WebサイトOPENしました！"},
+              { date: "2019.01.15", link:"", message: "WebサイトOPENしました！"},
             ]
           }
       }
@@ -50,6 +48,7 @@
   }
   &-date{
     display: block;
+    margin-right: 1em;
 
     @include media_desktop {
       display: inline-block;

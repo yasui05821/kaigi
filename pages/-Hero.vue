@@ -9,11 +9,11 @@
         <div class="p-hero-snsGroup">
           <div class="p-hero-hash">
             <span>Hashtag！</span>
-            <a href="">#phperKaigi</a>
+            <a href="https://twitter.com/hashtag/phperkaigi?src=hash" target="_blank">#phperKaigi</a>
           </div>
           <div class="p-hero-follow">
             <span>Follow me！</span>
-            <a href="">@phperkaigi</a>
+            <a href="https://twitter.com/phperkaigi" target="_blank">@phperkaigi</a>
           </div>
         </div>
       </div>

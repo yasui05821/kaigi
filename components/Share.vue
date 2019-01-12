@@ -2,14 +2,14 @@
   <section class="p-share">
     <span class="p-share-title">Sahre</span>
     <span class="p-share-border"></span>
-    <!--TODO リンクテキストおよびOGPの設定-->
-    <a href="https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Fdeveloper.twitter.com%2Fen%2Fdocs%2Ftwitter-for-websites%2Ftweet-button%2Foverview.html&amp;ref_src=twsrc%5Etfw&amp;text=Guides%20%E2%80%94%20Twitter%20Developers&amp;tw_p=tweetbutton&amp;url=https%3A%2F%2Fdeveloper.twitter.com%2Fen%2Fdocs%2Ftwitter-for-websites%2Ftweet-button%2Foverview.html" class="p-share-twitter">
+    <a href="http://twitter.com/share?url=https://phperkaigi.jp/2019/&amp;text=PHPerKaigi 2019" target="_blank" class="p-share-twitter">
       <img src="~assets/images/shareIcon_twitter.svg" alt="share-twitter">
     </a>
-    <a href="" class="p-share-facebook">
+    <a href="https://www.facebook.com/sharer.php?src=bm&u=https://phperkaigi.jp/2019/&t=PHPerKaigi 2019" target="_blank" class="p-share-facebook">
       <img src="~assets/images/shareIcon_facebook.svg" alt="share-facebook">
     </a>
-    <a href="" class="p-share-hatena">
+    <a href="http://b.hatena.ne.jp/add?mode=confirm&amp;url=https://phperkaigi.jp/2019/&amp;title=https://phperkaigi.jp/2019/
+" target="_blank" class="p-share-hatena">
       <img src="~assets/images/shareIcon_hateb.svg" alt="share-hatena">
     </a>
   </section>

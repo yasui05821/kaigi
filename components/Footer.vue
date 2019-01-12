@@ -15,17 +15,17 @@
                 過去の開催
               </span>
               <span class="p-footerLogo-baloon">
-                <a href="">2018</a>
+                <a href="https://phperkaigi.jp/2018/" target="_blank">2018</a>
               </span>
             </div>
           </div>
           <div class="p-footerLinks">
             <ul class="p-footerLinks-links">
               <li class="p-footerLinks-link">
-                <a href="">お問い合わせ（twitter）</a>
+                <a href="https://twitter.com/phperkaigi" target="_blank">お問い合わせ（twitter）</a>
               </li>
               <li class="p-footerLinks-link">
-                <a href="">行動規範</a>
+                <a href="" target="_blank">行動規範</a>
               </li>
             </ul>
           </div>
