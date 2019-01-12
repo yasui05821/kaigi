@@ -8,7 +8,7 @@
         :key="index"
       >
         <span class="p-news-date">2019.03.01</span>
-      　<span>WebサイトOPENしました！</span>
+      　<span>WebサイトをリニューアルOPENしました！</span>
       </p>
     </div>
     <p class="p-news-socialArea">

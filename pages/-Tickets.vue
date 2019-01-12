@@ -2,8 +2,8 @@
   <section class="p-tickets">
     <div class="container">
       <h2 class="c-title">Tickets</h2>
-      <p class="p-tickets-soon"> Comming soon ...</p>
-      <p class="p-tickets-message"> 2019年２月頃発売予定です。お楽しみに！</p>
+      <p class="p-tickets-message">チケット発売開始しました！</p>
+      <a href="#" target="_blank" class="p-tickets-btn">チケット購入！</a>
     </div>
   </section>
 </template>
@@ -27,10 +27,16 @@
       font-weight: bold;
       margin: 3.2rem 0;
     }
+
     &-message{
+      margin-bottom: 50px;
       text-align: center;
-      font-size: 2rem;
+      font-size: 1.8rem;
       padding: 0 2rem;
+    }
+
+    &-btn {
+      @include btn;
     }
 
   }

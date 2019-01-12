@@ -99,27 +99,7 @@
     margin-bottom: 3rem;
   }
   &-btn {
-    display: block;
-    margin: 0 auto;
-    width: 30rem;
-    max-width: 80%;
-    font-size: 2rem;
-    text-decoration: none;
-    line-height: 3;
-    background:
-      -webkit-linear-gradient(45deg, transparent 10px, $clr-black 10px),
-      -webkit-linear-gradient(135deg, transparent 10px, $clr-black 10px),
-      -webkit-linear-gradient(225deg, transparent 10px, $clr-black 10px),
-      -webkit-linear-gradient(315deg, transparent 10px, $clr-black 10px);
-    background-position: bottom left, bottom right, top right, top left;
-    background-size: 51% 51%;
-    background-repeat: no-repeat;
-    color: #ffffff;
-
-    &:hover {
-      opacity: .9;
-      text-decoration: underline;
-    }
+    @include btn;
   }
   &_text {
     margin-bottom: 40px;
