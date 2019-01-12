@@ -4,6 +4,9 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ],
 
   /*
   ** Headers of the page
