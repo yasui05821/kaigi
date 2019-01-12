@@ -247,12 +247,8 @@ export default {
       margin-bottom: 30px;
       width: 100%;
       @include media_desktop {
-        margin-right: 20px;
-        margin-left: 20px;
-        width: calc((100% - 40px) / 2);
-        &:nth-of-type(2n) {
-          margin-right: 0;
-        }
+        margin: 0 20px 30px;
+        width: calc((100% - 80px) / 2);
       }
     }
     .sponsorList-diamond_logo {
@@ -275,15 +271,11 @@ export default {
       justify-content: center;
     }
     .sponsorList-platinum_item {
-      margin-bottom: 30px;
-      width: 100%;
+      margin: 0 10px 30px;
+      width: 80%;
       @include media_desktop {
-        margin-right: 20px;
-        margin-left: 20px;
-        width: calc((100% - 80px) / 3);
-        &:nth-of-type(3n) {
-          margin-right: 0;
-        }
+        margin: 0 20px 30px;
+        width: calc((100% - 120px) / 3);
       }
     }
     .sponsorList-platinum_logo {
@@ -304,15 +296,11 @@ export default {
       justify-content: center;
     }
     .sponsorList-gold_item {
-      margin-bottom: 15px;
-      width: 100%;
+      margin: 0 10px 30px;
+      width: calc((100% - 40px) / 2);
       @include media_desktop {
-        margin-right: 20px;
-        margin-left: 20px;
-        width: calc((100% - 120px) / 4);
-        &:nth-of-type(4n) {
-          margin-right: 0;
-        }
+        margin: 0 20px 30px;
+        width: calc((100% - 160px) / 4);
       }
     }
     .sponsorList-gold_logo {
@@ -336,24 +324,12 @@ export default {
       width: 100%;
     }
     .sponsorList-silver_item{
-      margin-right: 5px;
-      margin-right: 5px;
+      margin: 0 5px 30px;
       margin-bottom: 20px;
-      width: calc((100% - 20px) / 3);
-      &:nth-of-type(3n) {
-        margin-right: 0;
-      }
+      width: calc((100% - 30px) / 3);
       @include media_desktop {
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom: 30px;
+        margin: 0 20px 30px;
         width: calc((100% - 160px) / 5);
-        &:nth-of-type(3n) {
-          margin-right: 40px;
-        }
-        &:nth-of-type(5n) {
-          margin-right: 0;
-        }
       }
     }
     .sponsorList-silver_logo{
@@ -377,17 +353,11 @@ export default {
       width: 100%;
     }
     .sponsorList-lunch_item{
-      margin-right: 5px;
-      margin-left: 5px;
-      margin-bottom: 20px;
+      margin: 0 10px 30px;
+      width: calc((100% - 40px) / 2);
       @include media_desktop {
-        margin-right: 20px;
-        margin-left: 20px;
-        margin-bottom: 30px;
-        width: calc((100% - 40px) / 4);
-        &:nth-of-type(2n) {
-          margin-right: 0;
-        }
+        margin: 0 20px 30px;
+        width: calc((100% - 160px) / 4);
       }
     }
     .sponsorList-lunch_logo{
@@ -411,11 +381,12 @@ export default {
       width: 100%;
     }
     .sponsorList-beer_item{
+      margin: 0 5px 30px;
+      margin-bottom: 20px;
+      width: calc((100% - 30px) / 3);
       @include media_desktop {
+        margin: 0 20px 30px;
         width: calc((100% - 160px) / 5);
-        &:nth-of-type(1n) {
-          margin-right: 0;
-        }
       }
     }
     .sponsorList-beer_logo{
