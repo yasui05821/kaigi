@@ -1,9 +1,9 @@
 <template>
   <section>
     <section class="p-toTop">
-      <button class="p-toTop-nob" type="button">
+      <a class="p-toTop-nob" tabindex="" @click="scroll">
         <img class="p-toTop-nobImg" src="~/assets/images/pageTop.png" alt="Page Top">
-      </button>
+      </a>
     </section>
     <footer class="p-footer">
       <div class="container">
@@ -43,9 +43,17 @@
 </template>
 
 <script>
-    export default {
-        name: "Footer"
+  import VueScrollTo from "vue-scrollto"
+
+  export default {
+    name: "Footer",
+    mounted() {},
+    methods:{
+      scroll(){
+        VueScrollTo.scrollTo(document.getElementsByTagName("html"),500)
+      }
     }
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -60,7 +68,11 @@ $clr-footer:#2D2C2F;
   height: 18rem;
   position: relative;
   background-position: 0 60px;
-  background-size: 830px auto;
+  background-size: 415px auto;
+
+  @include media_desktop {
+    background-size: 830px auto;
+  }
 
   &-nob{
     position: absolute;
