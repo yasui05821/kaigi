@@ -1,6 +1,6 @@
 <template>
   <section class="p-share">
-    <span class="p-share-title">Sahre</span>
+    <span class="p-share-title">Share</span>
     <span class="p-share-border"></span>
     <a href="http://twitter.com/share?url=https://phperkaigi.jp/2019/&amp;text=PHPerKaigi 2019" target="_blank" class="p-share-twitter">
       <img src="~assets/images/shareIcon_twitter.svg" alt="share-twitter">
