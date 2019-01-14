@@ -3,6 +3,9 @@ import createMeta from "./service/meta"
 const pkg = require('./package')
 
 module.exports = {
+  router: {
+    base: '/2019', 
+  }, 
   mode: 'universal',
   plugins: [
     { src: '~plugins/ga.js', ssr: false }
