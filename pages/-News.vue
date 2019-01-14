@@ -8,7 +8,8 @@
       >
         <span class="p-news-date">{{$moment(_news.published).format('YYYY/MM/DD')}}</span>
       　<span>
-        <a :href="_news.url">{{_news.title}}</a>
+        <a v-if="_news.url" :href="_news.url">{{_news.title}}</a>
+        <span v-else>{{_news.title}}</span>
         </span>
       </p>
     </div>
