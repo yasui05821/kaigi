@@ -30,5 +30,17 @@ export const actions = {
       }
     }
     return staffs
+  },
+  async fetchNews(){
+    const {data} = await this.$axios.get("/news")
+    const news = []
+    for(let _news of data.news) {
+      news.push({
+        title: _news.title,
+        published: _news.published, 
+        url: _news.url, 
+      });
+    }
+    return news
   }
 }

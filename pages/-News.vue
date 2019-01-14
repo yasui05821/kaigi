@@ -4,11 +4,12 @@
     <div class="p-news-items">
       <p
         class="p-news-item"
-        v-for="(_new,index) in news"
-        :key="index"
+        v-for="_news in news"
       >
-        <span class="p-news-date">2019.03.01</span>
-      　<span>WebサイトをリニューアルOPENしました！</span>
+        <span class="p-news-date">{{$moment(_news.published).format('YYYY/MM/DD')}}</span>
+      　<span>
+        <a :href="_news.url">{{_news.title}}</a>
+        </span>
       </p>
     </div>
     <p class="p-news-socialArea">
@@ -23,14 +24,12 @@
 
 <script>
     export default {
-      name: "News",
-      data(){
-          return {
-            news: [
-              { date: "2019.01.15", link:"", message: "WebサイトOPENしました！"},
-            ]
-          }
-      }
+      props: {
+        news: {
+          type: Object,
+          required: true
+        }
+      }, 
     }
 </script>
 
