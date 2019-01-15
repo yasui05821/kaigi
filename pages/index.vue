@@ -8,7 +8,7 @@
     <sec-place></sec-place>
     <sec-tickets></sec-tickets>
     <sec-wanted id="wanted"></sec-wanted>
-    <sec-news id="news"></sec-news>
+    <sec-news id="news" :news="news"></sec-news>
     <sec-about id="about"></sec-about>
     <sec-sponsor id="sponsor" :sponsors="sponsors"></sec-sponsor>
     <p-footer></p-footer>
@@ -29,13 +29,15 @@ import pFooter from '~/components/Footer.vue'
 
 export default {
   async asyncData({store}) {
-    const [sponsors,staffs] = await Promise.all([
+    const [sponsors,staffs,news] = await Promise.all([
       store.dispatch("fetchSponsors"),
       store.dispatch("fetchStaffs"),
+      store.dispatch("fetchNews"),
     ])
     return {
       sponsors,
-      staffs
+      staffs,
+      news
     }
   },
   components: {

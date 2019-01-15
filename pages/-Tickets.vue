@@ -1,4 +1,5 @@
 <template>
+<!--
   <section class="p-tickets">
     <div class="container">
       <h2 class="c-title">Tickets</h2>
@@ -6,6 +7,7 @@
       <a href="#" target="_blank" class="p-tickets-btn">チケット購入！</a>
     </div>
   </section>
+-->
 </template>
 
 <script>

@@ -3,10 +3,10 @@ import createMeta from "./service/meta"
 const pkg = require('./package')
 
 module.exports = {
+  router: {
+    base: '/2019', 
+  }, 
   mode: 'universal',
-  plugins: [
-    { src: '~plugins/ga.js', ssr: false }
-  ],
 
   /*
   ** Headers of the page
@@ -45,13 +45,17 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [
+    { src: '~plugins/ga.js', ssr: false }
+  ],
+
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    ['@nuxtjs/moment', ['ja']],
   ],
 
   axios: {
