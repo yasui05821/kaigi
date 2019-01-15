@@ -2,7 +2,7 @@ const defaultMeta = {
   description: "PHPerKaigi（ペチパーカイギ）は、現在PHPを使用している、過去にPHPを使用していた、これからPHPを使いたいと思っているエンジニアが、技術的なノウハウを共有するためのカンファレンス（イベント）です。",
   title: "PHPerKaigi 2019" ,
   host: "https://phperkaigi.jp/2019/",
-  image: "/PHPerKaigi.png"
+  image: "PHPerKaigi.png"
 }
 
 export default (args) => {
