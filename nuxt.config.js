@@ -3,6 +3,9 @@ import createMeta from "./service/meta"
 const pkg = require('./package')
 
 module.exports = {
+  router: {
+    base: '/2019', 
+  }, 
   mode: 'universal',
 
   /*
@@ -51,7 +54,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    "@nuxtjs/axios"
+    "@nuxtjs/axios",
+    ['@nuxtjs/moment', ['ja']],
   ],
 
   axios: {
