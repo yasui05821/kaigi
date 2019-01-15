@@ -8,10 +8,10 @@
       </section>
       <section class="p-headerNav">
         <ul class="p-headerNav-items">
-          <li :class="itemClass('#wanted')"><a href="#wanted" @click="scroll">Wanted</a></li>
-          <li :class="itemClass('#news')"><a href="#news" @click="scroll">News</a></li>
-          <li :class="itemClass('#about')"><a href="#about" @click="scroll">About</a></li>
-          <li :class="itemClass('#sponsor')"><a href="#sponsor" @click="scroll">Sponsor</a></li>
+          <li :class="itemClass('#wanted')"><a href="#wanted" @click.prevent="scroll">Wanted</a></li>
+          <li :class="itemClass('#news')"><a href="#news" @click.prevent="scroll">News</a></li>
+          <li :class="itemClass('#about')"><a href="#about" @click.prevent="scroll">About</a></li>
+          <li :class="itemClass('#sponsor')"><a href="#sponsor" @click.prevent="scroll">Sponsor</a></li>
         </ul>
       </section>
     </div>
