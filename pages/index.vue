@@ -11,6 +11,7 @@
     <sec-news id="news" :news="news"></sec-news>
     <sec-about id="about"></sec-about>
     <sec-sponsor id="sponsor" :sponsors="sponsors"></sec-sponsor>
+    <sec-staff></sec-staff>
     <p-footer></p-footer>
   </section>
 </template>
@@ -23,6 +24,7 @@ import secTickets from './-Tickets.vue'
 import secNews from './-News.vue'
 import secSponsor from './-Sponsor.vue'
 import secWanted from './-Wanted.vue'
+import secStaff from './-Staff.vue'
 import pHeader from '~/components/Header.vue'
 import pShare from '~/components/Share.vue'
 import pFooter from '~/components/Footer.vue'
@@ -48,6 +50,7 @@ export default {
     secNews,
     secSponsor,
     secWanted,
+    secStaff,
     pHeader,
     pShare,
     pFooter
