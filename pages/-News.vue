@@ -27,7 +27,7 @@
     export default {
       props: {
         news: {
-          type: Object,
+          type: Array,
           required: true
         }
       }, 
