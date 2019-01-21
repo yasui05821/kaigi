@@ -60,7 +60,7 @@ module.exports = {
 
   axios: {
     baseURL: "https://fortee.jp/phperkaigi-2019/api/",
-    debug: process.env.NODE_ENV !== "production"
+    // debug: process.env.NODE_ENV !== "production"
   },
 
   /*
