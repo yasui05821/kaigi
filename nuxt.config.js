@@ -3,9 +3,12 @@ import createMeta from "./service/meta"
 const pkg = require('./package')
 
 module.exports = {
+  generate: {
+    dir: process.env.NODE_ENV !== 'production' ? 'dist' : 'dist/2019'
+  },
   router: {
-    base: '/2019', 
-  }, 
+    base: process.env.NODE_ENV !== 'production' ? '/' : '/2019/',
+  },
   mode: 'universal',
 
   /*
@@ -76,5 +79,6 @@ module.exports = {
         use: ['json-loader', 'yaml-loader']
       })
     }
-  }
+  },
+
 }
