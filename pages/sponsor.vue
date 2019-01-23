@@ -1,5 +1,9 @@
 <template>
   <section>
+    <!--<no-ssr>-->
+      <!--<p-header></p-header>-->
+    <!--</no-ssr>-->
+    <p-share></p-share>
     <div class="sponsor-card">
       <div class="sponsor-card-contents">
         <div class="title-box">
@@ -7,7 +11,6 @@
           <h1 class="sponsor-name">株式会社カルテットコミュニケーションズ</h1>
         </div>
         <div class="logo">
-
         </div>
         <p class="introduction">
           私は時間とにかくこういう関係人という事のためになりたませ。同時にたくさんが存在社はしばしばそのふりだろたなりに用いよておきませがも説明しうたて、あいにくには思えれたないた。手伝いを読んんのもようやく将来へけっしてなですます。いくら大森さんへ成就国家それほど専攻を通り越します肴こういう事いつか戦争をというお妨害だませですたと
@@ -20,12 +23,22 @@
     <a href="#" target="_blank" class="p-wantedItem-btn top-page-btn">
       TOPに戻る
     </a>
+    <p-footer></p-footer>
   </section>
 </template>
 
 <script>
+// import pHeader from '~/components/Header.vue'
+import pShare from '~/components/Share.vue'
+import pFooter from '~/components/Footer.vue'
+
 export default {
-  name: "sponsor"
+  name: "sponsor",
+  components: {
+    pHeader,
+    pShare,
+    pFooter
+  }
 }
 </script>
 
