@@ -104,23 +104,26 @@
 
   @keyframes slide {
     from {
-      background-position-x: 0%;
+      transform: translateX(0);
     }
+
     to {
-      background-position-x: 415px;
+      transform: translateX(415px);
     }
   }
 
   @keyframes slide-desktop {
     from {
-      background-position-x: 0%;
+      transform: translateX(0);
     }
+
     to {
-      background-position-x: 830px;
+      transform: translateX(830px);
     }
   }
 
   .p-hero {
+    overflow: hidden;
     position: relative;
     z-index: 0;
     padding-top: 60px;
@@ -139,8 +142,8 @@
       top: 0;
       right: 0;
       bottom: 0;
-      left: 0;
       z-index: -1;
+      width: calc(100% + 415px);
       background-position: center;
       background-size: 415px auto;
       content: '';
@@ -148,18 +151,17 @@
       transition: opacity 0.5s linear 1s;
 
       @include media_desktop {
+        width: calc(100% + 830px);
         background-size: 830px auto;
       }
     }
 
     &::before {
-      background-image: url("~assets/images/heroPattern_01.png"),
-                        url("~assets/images/heroPattern_03.png");
+      background-image: url("~assets/images/heroPattern_01.png");
     }
 
     &::after {
-      background-image: url("~assets/images/heroPattern_02.png"),
-                        url("~assets/images/heroPattern_04.png");
+      background-image: url("~assets/images/heroPattern_02.png");
     }
 
     &.is-active{
