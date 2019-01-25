@@ -17,7 +17,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-diamond_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -38,7 +38,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-platinum_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -59,7 +59,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-gold_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -80,7 +80,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-silver_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -101,7 +101,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-lunch_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -122,7 +122,7 @@
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
           <router-link to="#" class="sponsorList-beer_button">
-            紹介ページを見る
+            紹介ページへ
           </router-link>
         </div>
       </div>
@@ -197,16 +197,16 @@ export default {
     }
   }
   @mixin button {
-    display: none;
+    display: block;
     padding: 10px 10px;
-    font-size: 1rem;
+    font-size: 1.4rem;
     color: white;
     text-align: center;
     text-decoration: none;
     position: relative;
     background: black;
     @include media_desktop {
-      padding: 20px 10px;
+      padding: 15px 10px;
     }
     &::after {
       content: "\f054";
