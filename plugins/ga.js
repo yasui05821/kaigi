@@ -23,7 +23,7 @@ export default ({ app }) => {
     /*
     ** Google アナリティクスにページビューが追加されたことを伝える
     */
-    ga('set', 'page', to.fullPath)
+    ga('set', 'page', '/2019' + to.fullPath)
   ga('send', 'pageview')
 })
 }
