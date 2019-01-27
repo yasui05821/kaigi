@@ -9,6 +9,7 @@ export const actions = {
       "シルバープラン": "SILVER",
       "ビールスポンサー": "BEER",
       "ランチスポンサー": "LUNCH",
+      "デザインスポンサー": "DESIGN",
     }
 
     const sponsors = {}
@@ -20,6 +21,21 @@ export const actions = {
       }
     }
     return sponsors
+  },
+  async fetchSponsorByName({dispatch}, name){
+    const result = await dispatch("fetchSponsors")
+    for(let labelKey in result) {
+      let sponsorRankInfo = result[labelKey]
+      let {label,sponsors} = sponsorRankInfo
+      for(let sponsor of sponsors) {
+        if (sponsor.name == name) {
+          return {
+            sponsor,
+            label
+          }
+        }
+      }
+    }
   },
   async fetchStaffs(){
     const {data} = await this.$axios.get("/staff")

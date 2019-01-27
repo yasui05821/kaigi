@@ -1,43 +1,66 @@
 <template>
   <section>
-    <!--<no-ssr>-->
-      <!--<p-header></p-header>-->
-    <!--</no-ssr>-->
+    <no-ssr>
+      <sub-header></sub-header>
+    </no-ssr>
     <p-share></p-share>
-    <div class="sponsor-card">
-      <div class="sponsor-card-contents">
-        <div class="title-box">
-          <p class="rank">Platinum</p>
-          <h1 class="sponsor-name">株式会社カルテットコミュニケーションズ</h1>
+    <div class="container sponsor-card-container">
+      <div class="sponsor-card">
+        <div class="sponsor-card-contents">
+          <div class="title-box">
+            <p class="rank" v-if="lank=='ダイアモンドプラン'">Platinum</p>
+            <p class="rank" v-if="lank=='プラチナプラン'">Diamond</p>
+            <p class="rank" v-if="lank=='ゴールドプラン'">Gold</p>
+            <p class="rank" v-if="lank=='シルバープラン'">Silver</p>
+            <p class="rank" v-if="lank=='ビールスポンサー'">Beer</p>
+            <p class="rank" v-if="lank=='ランチスポンサー'">Lunch</p>
+            <p class="rank" v-if="lank=='デザインスポンサー'">Design</p>
+            <h1 class="sponsor-name">{{sponsor.name}}</h1>
+          </div>
+          <div class="logo" :style="logoImageStyle">
+          </div>
+          <p class="introduction">
+            {{sponsor.pr}}
+          </p>
+          <a :href="sponsor.url" target="_blank" class="p-wantedItem-btn plan-page-btn">
+            企画ページを見る
+          </a>
         </div>
-        <div class="logo">
-        </div>
-        <p class="introduction">
-          私は時間とにかくこういう関係人という事のためになりたませ。同時にたくさんが存在社はしばしばそのふりだろたなりに用いよておきませがも説明しうたて、あいにくには思えれたないた。手伝いを読んんのもようやく将来へけっしてなですます。いくら大森さんへ成就国家それほど専攻を通り越します肴こういう事いつか戦争をというお妨害だませですたと
-        </p>
-        <a href="#" target="_blank" class="p-wantedItem-btn plan-page-btn">
-          企画ページを見る
-        </a>
       </div>
+      <a href="#" target="_blank" class="p-wantedItem-btn top-page-btn">
+        TOPに戻る
+      </a>
     </div>
-    <a href="#" target="_blank" class="p-wantedItem-btn top-page-btn">
-      TOPに戻る
-    </a>
-    <p-footer></p-footer>
+    <sub-footer></sub-footer>
   </section>
 </template>
 
 <script>
-// import pHeader from '~/components/Header.vue'
+import subHeader from '~/components/HeaderSub.vue'
 import pShare from '~/components/Share.vue'
-import pFooter from '~/components/Footer.vue'
+import subFooter from '~/components/Footer.vue'
 
 export default {
-  name: "sponsor",
   components: {
-    pHeader,
+    subHeader,
     pShare,
-    pFooter
+    subFooter
+  },
+  async asyncData({store,route}){
+    const [sponsor] = await Promise.all([
+      store.dispatch("fetchSponsorByName", route.params.name)
+    ])
+    return {
+      lank: sponsor.label,
+      sponsor: sponsor.sponsor
+    }
+  },
+  computed:{
+    logoImageStyle(){
+      return {
+        backgroundImage: `url(${this.sponsor.avatar})`
+      }
+    }
   }
 }
 </script>
@@ -100,14 +123,18 @@ export default {
   }
 }
 
+.sponsor-card-container{
+  padding-top: 120px;
+}
+
 .sponsor-card {
   width: auto;
-  margin: 120px 10px auto 10px;
+  margin: 0px 10px auto 10px;
   background: #fff;
   @include media_desktop {
     max-width: 980px;
     width: 80%;
-    margin: 120px auto auto auto;
+    margin: 0px auto auto auto;
   }
   .sponsor-card-contents {
     padding: 30px 20px;
@@ -128,8 +155,11 @@ export default {
     }
     .logo {
       height: 270px;
-      background: #ebebeb;
+      background: #fff;
       margin-bottom: 20px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
     }
     .introduction {
       margin-bottom: 60px;
