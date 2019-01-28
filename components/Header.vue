@@ -2,7 +2,7 @@
   <section class="p-header">
     <div class="container p-header-container">
       <section class="p-headerLogo">
-        <a href="/">
+        <a href="/2019">
           <img class="p-headerLogo-logo" src="~/assets/images/textLogo-black.svg" alt="PHPerKaigi 2019">
         </a>
       </section>
