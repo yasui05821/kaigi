@@ -1,154 +1,156 @@
 <template>
-  <div class="p-sponsor container" >
-    <h2 class="c-title mb-5">Sponsor</h2>
-    <div class="sponsorDiamond">
-      <div class="sponsorDiamond_rank">Diamond</div>
-      <div class="sponsorList-diamond">
-        <div
-          class="sponsorList-diamond_item"
-          v-for="(val,key) in sponsors.DIAMOND.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-diamond_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-diamond_button">
-            紹介ページへ
-          </router-link>
+  <section class="p-sponsor" >
+    <div class="container">
+      <h2 class="c-title mb-5">Sponsor</h2>
+      <div class="sponsorDiamond">
+        <div class="sponsorDiamond_rank">Diamond</div>
+        <div class="sponsorList-diamond">
+          <div
+                  class="sponsorList-diamond_item"
+                  v-for="(val,key) in sponsors.DIAMOND.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-diamond_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-diamond_button">
+              紹介ページへ
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorPlatinum">
+        <div class="sponsorPlatinum_rank">Platinum</div>
+        <div class="sponsorList-platinum">
+          <div
+                  class="sponsorList-platinum_item"
+                  v-for="(val,key) in sponsors.PLATINUM.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-platinum_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-platinum_button">
+              紹介ページへ
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorGold">
+        <div class="sponsorGold_rank">Gold</div>
+        <div class="sponsorList-gold">
+          <div
+                  class="sponsorList-gold_item"
+                  v-for="(val,key) in sponsors.GOLD.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-gold_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-gold_button">
+              紹介ページへ
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorSilver">
+        <div class="sponsorSilver_rank">Silver</div>
+        <div class="sponsorList-silver">
+          <div
+                  class="sponsorList-silver_item"
+                  v-for="(val,key) in sponsors.SILVER.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-silver_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-silver_button">
+              紹介ページへ
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorLunch">
+        <div class="sponsorLunch_rank">Lunch</div>
+        <div class="sponsorList-lunch">
+          <div
+                  class="sponsorList-lunch_item"
+                  v-for="(val,key) in sponsors.LUNCH.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-lunch_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-lunch_button">
+              紹介ページへ
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorBeer">
+        <div class="sponsorBeer_rank">Beer</div>
+        <div class="sponsorList-beer">
+          <div
+                  class="sponsorList-beer_item"
+                  v-for="(val,key) in sponsors.BEER.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-beer_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
+              紹介ページを見る
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="sponsorBeer">
+        <div class="sponsorBeer_rank">Design</div>
+        <div class="sponsorList-beer">
+          <div
+                  class="sponsorList-beer_item"
+                  v-for="(val,key) in sponsors.DESIGN.sponsors"
+                  v-if="val.avatar"
+                  :key="key">
+            <a
+                    class="sponsorList-beer_logo"
+                    :href="val.url"
+                    target="_blank"
+                    rel="noopener"
+                    :style="{backgroundImage:`url('${val.avatar}')`}"
+                    :title="val.name"/>
+            <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
+              紹介ページを見る
+            </router-link>
+          </div>
         </div>
       </div>
     </div>
-    <div class="sponsorPlatinum">
-      <div class="sponsorPlatinum_rank">Platinum</div>
-      <div class="sponsorList-platinum">
-        <div
-          class="sponsorList-platinum_item"
-          v-for="(val,key) in sponsors.PLATINUM.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-platinum_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-platinum_button">
-            紹介ページへ
-          </router-link>
-        </div>
-      </div>
-    </div>
-    <div class="sponsorGold">
-      <div class="sponsorGold_rank">Gold</div>
-      <div class="sponsorList-gold">
-        <div
-          class="sponsorList-gold_item"
-          v-for="(val,key) in sponsors.GOLD.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-gold_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-gold_button">
-            紹介ページへ
-          </router-link>
-        </div>
-      </div>
-    </div>
-    <div class="sponsorSilver">
-      <div class="sponsorSilver_rank">Silver</div>
-      <div class="sponsorList-silver">
-        <div
-          class="sponsorList-silver_item"
-          v-for="(val,key) in sponsors.SILVER.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-silver_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-silver_button">
-            紹介ページへ
-          </router-link>
-        </div>
-      </div>
-    </div>
-    <div class="sponsorLunch">
-      <div class="sponsorLunch_rank">Lunch</div>
-      <div class="sponsorList-lunch">
-        <div
-          class="sponsorList-lunch_item"
-          v-for="(val,key) in sponsors.LUNCH.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-lunch_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-lunch_button">
-            紹介ページへ
-          </router-link>
-        </div>
-      </div>
-    </div>
-    <div class="sponsorBeer">
-      <div class="sponsorBeer_rank">Beer</div>
-      <div class="sponsorList-beer">
-        <div
-          class="sponsorList-beer_item"
-          v-for="(val,key) in sponsors.BEER.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-beer_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
-            紹介ページを見る
-          </router-link>
-        </div>
-      </div>
-    </div>
-    <div class="sponsorBeer">
-      <div class="sponsorBeer_rank">Design</div>
-      <div class="sponsorList-beer">
-        <div
-          class="sponsorList-beer_item"
-          v-for="(val,key) in sponsors.DESIGN.sponsors"
-          v-if="val.avatar"
-          :key="key">
-          <a
-            class="sponsorList-beer_logo"
-            :href="val.url"
-            target="_blank"
-            rel="noopener"
-            :style="{backgroundImage:`url('${val.avatar}')`}"
-            :title="val.name"/>
-          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
-            紹介ページを見る
-          </router-link>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </template>
 
 <script>

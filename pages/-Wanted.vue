@@ -1,21 +1,23 @@
 <template>
-  <section class="p-wanted container">
-    <h2 class="c-title">Wanted</h2>
-    <div class="p-wanted-items">
-      <section class="p-wantedItem">
-        <div class="p-wantedItem-icon">
-          <i class="material-icons">thumb_up</i>
-        </div>
-        <h3 class="p-wantedItem-title">スポンサー募集</h3>
-        <p class="p-wantedItem-message">
-          PHPerKaigi 2019をご支援頂けるスポンサー様を募集しています。
-          詳細は資料請求フォームからご連絡ください。折り返しスポンサープログラムの詳細をお送りします。
-        </p>
-        <p>募集締切: 1/31（木）</p>
-        <a href="https://fortee.jp/phperkaigi-2019/sponsor/brochure-request" target="_blank" class="p-wantedItem-btn">
-          スポンサー資料請求
-        </a>
-      </section>
+  <section class="p-wanted">
+    <div class="container">
+      <h2 class="c-title">Wanted</h2>
+      <div class="p-wanted-items">
+        <section class="p-wantedItem">
+          <div class="p-wantedItem-icon">
+            <i class="material-icons">thumb_up</i>
+          </div>
+          <h3 class="p-wantedItem-title">スポンサー募集</h3>
+          <p class="p-wantedItem-message">
+            PHPerKaigi 2019をご支援頂けるスポンサー様を募集しています。
+            詳細は資料請求フォームからご連絡ください。折り返しスポンサープログラムの詳細をお送りします。
+          </p>
+          <p>募集締切: 1/31（木）</p>
+          <a href="https://fortee.jp/phperkaigi-2019/sponsor/brochure-request" target="_blank" class="p-wantedItem-btn">
+            スポンサー資料請求
+          </a>
+        </section>
+      </div>
     </div>
   </section>
 </template>

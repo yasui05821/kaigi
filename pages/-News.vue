@@ -1,25 +1,27 @@
 <template>
-  <section class="p-news container" >
-    <h2 class="c-title">News</h2>
-    <div class="p-news-items">
-      <p
-        class="p-news-item"
-        v-for="_news in news"
-      >
-        <span class="p-news-date">{{$moment(_news.published).format('YYYY/MM/DD')}}</span>
-      　<span>
+  <section class="p-news" >
+    <div class="container">
+      <h2 class="c-title">News</h2>
+      <div class="p-news-items">
+        <p
+                class="p-news-item"
+                v-for="_news in news"
+        >
+          <span class="p-news-date">{{$moment(_news.published).format('YYYY/MM/DD')}}</span>
+          　<span>
         <a v-if="_news.url" :href="_news.url">{{_news.title}}</a>
         <span v-else>{{_news.title}}</span>
         </span>
-      </p>
-    </div>
-    <p class="p-news-socialArea">
+        </p>
+      </div>
+      <p class="p-news-socialArea">
       <span class="p-news-socialIcon">
         <i class="fab fa-twitter mr-3"></i>
       </span>
-      <a href="https://twitter.com/phperkaigi" target="_blank">PHPerKaigi公式アカウント</a>
-      も最新情報を発信しています！ぜひフォローしてみてください。
-    </p>
+        <a href="https://twitter.com/phperkaigi" target="_blank">PHPerKaigi公式アカウント</a>
+        も最新情報を発信しています！ぜひフォローしてみてください。
+      </p>
+    </div>
   </section>
 </template>
 
