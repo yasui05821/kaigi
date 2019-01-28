@@ -16,7 +16,7 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-diamond_button">
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-diamond_button">
             紹介ページへ
           </router-link>
         </div>
@@ -37,7 +37,7 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-platinum_button">
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-platinum_button">
             紹介ページへ
           </router-link>
         </div>
@@ -58,7 +58,7 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-gold_button">
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-gold_button">
             紹介ページへ
           </router-link>
         </div>
@@ -79,7 +79,7 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-silver_button">
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-silver_button">
             紹介ページへ
           </router-link>
         </div>
@@ -100,7 +100,7 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-lunch_button">
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-lunch_button">
             紹介ページへ
           </router-link>
         </div>
@@ -121,8 +121,29 @@
             rel="noopener"
             :style="{backgroundImage:`url('${val.avatar}')`}"
             :title="val.name"/>
-          <router-link to="#" class="sponsorList-beer_button">
-            紹介ページへ
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
+            紹介ページを見る
+          </router-link>
+        </div>
+      </div>
+    </div>
+    <div class="sponsorBeer">
+      <div class="sponsorBeer_rank">Design</div>
+      <div class="sponsorList-beer">
+        <div
+          class="sponsorList-beer_item"
+          v-for="(val,key) in sponsors.DESIGN.sponsors"
+          v-if="val.avatar"
+          :key="key">
+          <a
+            class="sponsorList-beer_logo"
+            :href="val.url"
+            target="_blank"
+            rel="noopener"
+            :style="{backgroundImage:`url('${val.avatar}')`}"
+            :title="val.name"/>
+          <router-link :to="`/sponsor/${val.name}`" class="sponsorList-beer_button">
+            紹介ページを見る
           </router-link>
         </div>
       </div>
@@ -198,6 +219,7 @@ export default {
   }
   @mixin button {
     display: block;
+    width: 100%;
     padding: 10px 10px;
     font-size: 1.4rem;
     color: white;
@@ -206,6 +228,7 @@ export default {
     position: relative;
     background: black;
     @include media_desktop {
+      font-size: 1.2rem;
       padding: 15px 10px;
     }
     &::after {

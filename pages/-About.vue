@@ -28,7 +28,7 @@
         <h3 class="p-aboutItem2-title">PHPerKaigi 2019について</h3>
         <p class="p-aboutItem2-message">PHPerKaigi（ペチパーカイギ）は、PHPer、つまり、現在PHPを使用している方、過去にPHPを使用していた方、これからPHPを使いたいと思っている方、そしてPHPが大好きな方たちが、技術的なノウハウとPHP愛を共有するためのイベントです。
         <p class="p-aboutItem2-message"> 公募されたスピーカーによるトークセッションはもちろん、数人で特定のテーマについてディスカッションするInteractive Round Tableや、アンカンファレンス、懇親会など、日本中から集まったPHPerたちと技術的な話を思う存分するための企画を検討中です。</p>
-        <p class="p-aboutItem2-message">2019年3月29日（金）〜3月31日（日）はPHPerたちのお祭りです！<br> 歴戦の勇者みたいな方はもちろん、初心者の方にも、全てのPHPerが 楽しめるイベントです。スケジュール、空けておいて下さい！</p>
+        <p class="p-aboutItem2-message">2019年3月29日（金）〜 3月31日（日）はPHPerたちのお祭りです！<br> 歴戦の勇者みたいな方はもちろん、初心者の方にも、全てのPHPerが 楽しめるイベントです。スケジュール、空けておいて下さい！</p>
       </div>
     </div>
   </div>
