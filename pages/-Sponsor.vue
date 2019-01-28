@@ -223,14 +223,14 @@ export default {
     display: block;
     width: 100%;
     padding: 10px 10px;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: white;
     text-align: center;
     text-decoration: none;
     position: relative;
     background: black;
     @include media_desktop {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       padding: 15px 10px;
     }
     &::after {
