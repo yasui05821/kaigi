@@ -1,85 +1,62 @@
 <template>
-  <div class="p-staff container">
-    <h2 class="c-title mb-5">Staff</h2>
-    <div class="staff-boxes">
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample Sample Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">ああああああああああああああああ</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
-      </div>
-      <div class="staff-box">
-        <img src="https://via.placeholder.com/150" class="staff-img">
-        <span class="staff-name">Sample</span>
+  <section class="p-staff">
+    <div class=" container">
+      <h2 class="c-title">Staff</h2>
+      <div class="staffs">
+        <div class="staffs_leader">
+          <p class="staffs_post" ><i class="material-icons">stars</i>実行委員長</p>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+        </div>
+        <span class="staffs_post" ><i class="material-icons">stars</i>コアスタッフ</span>
+        <div class="staffs_core">
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+          <div class="staff_item">
+            <img src="https://via.placeholder.com/150" alt="">
+            <span>田中太郎</span>
+          </div>
+        </div>
+        <div class="staffs_day"></div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -89,32 +66,78 @@
 </script>
 
 <style lang="scss" scoped>
+  @import "~/assets/scss/library/_variable.scss";
   @import "~/assets/scss/library/_mixin.scss";
 
   .p-staff {
     @include space_section;
-    .staff-boxes {
-      padding-top: 30px;
-      display: flex;
-      flex-wrap: wrap;
-      .staff-box {
-        height: 160px;
-        text-align: center;
-        width: calc(100% / 3);
-        @include media_desktop {
-          width: calc(100% / 7);
-        }
-        .staff-img {
-          border-radius: 1000px;
-          margin: 0 auto;
-        }
-        .staff-name {
-          display: inline-block;
-          margin: 10px auto;
-          line-height: 1;
-        }
+
+    .staffs {
+
+    }
+    .staffs_post {
+      display: inline-block;
+      font-size: 1.7rem;
+      font-weight: bold;
+
+      i {
+        vertical-align: -.2em;
       }
     }
+
+    .staff_item {
+      margin: 0 30px 30px;
+      display: inline-block;
+      text-align: center;
+      img {
+        margin: 0 auto 10px;
+        border-radius: 50%;
+        display: block;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+      }
+      span {
+        display: inline-block;
+        font-size: 1.6rem;
+        line-height: 1.7;
+      }
+    }
+
+    .staffs_leader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .staffs_post{
+        margin-right: 40px;
+      }
+    }
+
+    .staffs_core {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 30px;
+
+      .staffs_post{
+        margin-right: 40px;
+      }
+
+    }
+
+    .staffs_day {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .staffs_post{
+        margin-right: 40px;
+      }
+    }
+
+
   }
 
 </style>
