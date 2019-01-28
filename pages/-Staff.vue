@@ -103,6 +103,15 @@
       text-align: center;
       box-sizing: border-box;
       color: inherit;
+
+      &:hover {
+        opacity: .8;
+        img {
+          border-radius: 20px;
+          background: #2D2C2F;
+        }
+      }
+
       img {
         margin: 0 auto 4px;
         border-radius: 50%;
@@ -112,12 +121,16 @@
         object-fit: cover;
         @include media_desktop {
           margin: 0 auto 10px;
-          width: 80px;
-          height: 80px;
+          width: 100%;
+          height: 100%;
+          max-width: 80px;
+          max-height: 80px;
         }
       }
       span {
         display: inline-block;
+        max-width: 100%;
+        word-wrap: break-word;
         font-size: 1.6rem;
         line-height: 1.7;
       }
@@ -145,16 +158,20 @@
     .staffs_core {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 40px;
       max-width: 100%;
+
+      @include media_desktop {
+        margin-bottom: 60px;
+      }
 
       .staff_item {
         width: calc(100% / 4);
 
         @include media_desktop {
-          margin: 0;
+          margin: 0 0 30px;
           width: calc(100% / 8);
         }
       }
@@ -164,16 +181,20 @@
     .staffs_day {
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
       margin-bottom: 40px;
       max-width: 100%;
+
+      @include media_desktop {
+        margin-bottom: 60px;
+      }
 
       .staff_item {
         width: calc(100% / 4);
 
         @include media_desktop {
-          margin: 0;
+          margin: 0 0 30px;
           width: calc(100% / 8);
         }
       }
