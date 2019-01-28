@@ -16,20 +16,6 @@
           スポンサー資料請求
         </a>
       </section>
-      <section class="p-wantedItem">
-        <div class="p-wantedItem-icon">
-          <i class="material-icons">mic</i>
-        </div>
-        <h3 class="p-wantedItem-title">スピーカー募集</h3>
-        <p class="p-wantedItem-message">
-          PHPerKaigi 2019を盛り上げるトークを募集しています。
-          PHPのことでもそうでないことでも参加者が聞いて楽しいあなたの情熱をシェアしてください！
-        </p>
-        <p>募集締切: 1/21（月）12:00</p>
-        <a href="https://fortee.jp/phperkaigi-2019/speaker/proposal/cfp" target="_blank" class="p-wantedItem-btn">
-          トーク応募
-        </a>
-      </section>
     </div>
   </section>
 </template>
