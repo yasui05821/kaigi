@@ -4,32 +4,34 @@
       <sub-header></sub-header>
     </no-ssr>
     <p-share></p-share>
-    <div class="container sponsor-card-container">
-      <div class="sponsor-card">
-        <div class="sponsor-card-contents">
-          <div class="title-box">
-            <p class="rank" v-if="lank=='ダイアモンドプラン'">Platinum</p>
-            <p class="rank" v-if="lank=='プラチナプラン'">Diamond</p>
-            <p class="rank" v-if="lank=='ゴールドプラン'">Gold</p>
-            <p class="rank" v-if="lank=='シルバープラン'">Silver</p>
-            <p class="rank" v-if="lank=='ビールスポンサー'">Beer</p>
-            <p class="rank" v-if="lank=='ランチスポンサー'">Lunch</p>
-            <p class="rank" v-if="lank=='デザインスポンサー'">Design</p>
-            <h1 class="sponsor-name">{{sponsor.name}}</h1>
+    <div class="p-sponsorProf">
+      <div class="container sponsor-card-container">
+        <div class="sponsor-card">
+          <div class="sponsor-card-contents">
+            <div class="title-box">
+              <p class="rank" v-if="lank=='ダイアモンドプラン'">Platinum</p>
+              <p class="rank" v-if="lank=='プラチナプラン'">Diamond</p>
+              <p class="rank" v-if="lank=='ゴールドプラン'">Gold</p>
+              <p class="rank" v-if="lank=='シルバープラン'">Silver</p>
+              <p class="rank" v-if="lank=='ビールスポンサー'">Beer</p>
+              <p class="rank" v-if="lank=='ランチスポンサー'">Lunch</p>
+              <p class="rank" v-if="lank=='デザインスポンサー'">Design</p>
+              <h1 class="sponsor-name">{{sponsor.name}}</h1>
+            </div>
+            <div class="logo" :style="logoImageStyle">
+            </div>
+            <p class="introduction">
+              {{sponsor.pr}}
+            </p>
+            <a :href="sponsor.url" target="_blank" class="p-wantedItem-btn plan-page-btn">
+              企画ページを見る
+            </a>
           </div>
-          <div class="logo" :style="logoImageStyle">
-          </div>
-          <p class="introduction">
-            {{sponsor.pr}}
-          </p>
-          <a :href="sponsor.url" target="_blank" class="p-wantedItem-btn plan-page-btn">
-            企画ページを見る
-          </a>
         </div>
+        <a href="/" class="p-wantedItem-btn top-page-btn">
+          TOPに戻る
+        </a>
       </div>
-      <a href="#" target="_blank" class="p-wantedItem-btn top-page-btn">
-        TOPに戻る
-      </a>
     </div>
     <sub-footer></sub-footer>
   </section>
@@ -38,7 +40,7 @@
 <script>
 import subHeader from '~/components/HeaderSub.vue'
 import pShare from '~/components/Share.vue'
-import subFooter from '~/components/Footer.vue'
+import subFooter from '~/components/SubFooter.vue'
 
 export default {
   components: {
@@ -68,6 +70,16 @@ export default {
 <style lang="scss" scoped>
 @import "~/assets/scss/library/_variable.scss";
 @import "~/assets/scss/library/_mixin.scss";
+.p-sponsorProf {
+  padding-bottom: 100px;
+  background-image: url("~assets/images/pattern.png");
+  background-position: 0 60px;
+  background-size: 415px auto;
+  @include media_desktop {
+    padding-bottom: 150px;
+    background-size: 830px auto;
+  }
+}
 
 .p-wantedItem {
   width: 43rem;
@@ -124,33 +136,46 @@ export default {
 }
 
 .sponsor-card-container{
-  padding-top: 120px;
+  padding-top: 80px;
+  @include media_desktop {
+    padding-top: 120px;
+  }
 }
 
 .sponsor-card {
   width: auto;
-  margin: 0px 10px auto 10px;
   background: #fff;
+
   @include media_desktop {
     max-width: 980px;
     width: 80%;
-    margin: 0px auto auto auto;
+    margin: 0 auto ;
   }
   .sponsor-card-contents {
-    padding: 30px 20px;
+    margin-bottom: 50px;
+    padding: 20px;
+
     @include media_desktop {
+      margin-bottom: 80px;
       padding: 50px 65px;
     }
+
     .title-box {
       margin-bottom: 30px;
       .rank {
         font-size: 2rem;
         margin-bottom: 5px;
+        font-family: 'Fugaz One', cursive;
       }
       .sponsor-name {
         font-weight: bold;
-        font-size: 3rem;
-        margin-bottom: 30px;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+
+        @include media_desktop {
+          font-size: 3rem;
+          margin-bottom: 30px;
+        }
       }
     }
     .logo {
@@ -171,11 +196,17 @@ export default {
   margin-bottom: 20px;
   position: relative;
   max-width: 100%;
+  font-size: 1.6rem;
+
+  @include media_desktop {
+    font-size: 1.8rem;
+  }
+
   &::after {
     content: "\f35d";
     display: inline-block;
     font-family: "Font Awesome 5 Free";
-    font-size: .8em;
+    font-size: .7em;
     font-style: normal;
     font-weight: bold;
     font-variant: normal;
@@ -183,9 +214,10 @@ export default {
     line-height: 1;
     color: #fff;
     position: absolute;
-    right: 10px;
+    right: 15px;
     top: 50%;
     transform: translateY(-50%);
+
     @include media_desktop {
       right: 20px;
     }
@@ -193,13 +225,13 @@ export default {
 }
 .top-page-btn {
   color: #2d2c2f;
-  margin: 100px auto 129px auto;
   background:
           -webkit-linear-gradient(45deg, transparent 10px, #fff 10px),
           -webkit-linear-gradient(135deg, transparent 10px, #fff 10px),
           -webkit-linear-gradient(225deg, transparent 10px, #fff 10px),
           -webkit-linear-gradient(315deg, transparent 10px, #fff 10px);
   background-position: bottom left, bottom right, top right, top left;
+  font-size: 1.6rem;
   background-size: 51% 51%;
   background-repeat: no-repeat;
   position: relative;
@@ -207,7 +239,7 @@ export default {
     content: "\f104";
     display: inline-block;
     font-family: "Font Awesome 5 Free";
-    font-size: .8em;
+    font-size: 1em;
     font-style: normal;
     font-weight: bold;
     font-variant: normal;
@@ -215,12 +247,9 @@ export default {
     line-height: 1;
     color: #2d2c2f;
     position: absolute;
-    left: 10px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    @include media_desktop {
-      left: 20px;
-    }
   }
 }
 </style>

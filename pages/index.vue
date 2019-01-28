@@ -11,7 +11,10 @@
     <sec-news id="news" :news="news"></sec-news>
     <sec-about id="about"></sec-about>
     <sec-sponsor id="sponsor" :sponsors="sponsors"></sec-sponsor>
-    <p-footer></p-footer>
+    <sec-staff></sec-staff>
+    <div class="footer_wrap">
+      <p-footer></p-footer>
+    </div>
   </section>
 </template>
 
@@ -23,6 +26,7 @@ import secTickets from './-Tickets.vue'
 import secNews from './-News.vue'
 import secSponsor from './-Sponsor.vue'
 import secWanted from './-Wanted.vue'
+import secStaff from './-Staff.vue'
 import pHeader from '~/components/Header.vue'
 import pShare from '~/components/Share.vue'
 import pFooter from '~/components/Footer.vue'
@@ -47,6 +51,7 @@ export default {
     secTickets,
     secNews,
     secSponsor,
+    secStaff,
     secWanted,
     pHeader,
     pShare,
@@ -56,5 +61,8 @@ export default {
 </script>
 
 <style>
+  .footer_wrap {
+    border-top: 3px #FFF solid;
+  }
 
 </style>
