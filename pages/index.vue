@@ -11,7 +11,9 @@
     <sec-news id="news" :news="news"></sec-news>
     <sec-about id="about"></sec-about>
     <sec-sponsor id="sponsor" :sponsors="sponsors"></sec-sponsor>
-    <p-footer></p-footer>
+    <div class="footer_wrap">
+      <p-footer></p-footer>
+    </div>
   </section>
 </template>
 
@@ -56,5 +58,8 @@ export default {
 </script>
 
 <style>
+  .footer_wrap {
+    border-top: 3px #FFF solid;
+  }
 
 </style>

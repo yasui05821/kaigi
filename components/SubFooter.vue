@@ -1,10 +1,5 @@
 <template>
   <section>
-    <section class="p-toTop">
-      <a class="p-toTop-nob" tabindex="" @click="scroll">
-        <img class="p-toTop-nobImg" src="~/assets/images/pageTop.png" alt="Page Top">
-      </a>
-    </section>
     <footer class="p-footer">
       <div class="container">
         <div class="p-footer-items">
@@ -61,44 +56,6 @@
 @import "~/assets/scss/library/_variable.scss";
 
 $clr-footer:#2D2C2F;
-
-.p-toTop{
-  background-image: url("~assets/images/pattern.png");
-  height: 18rem;
-  position: relative;
-  background-position: 0 60px;
-  background-size: 415px auto;
-
-  @include media_desktop {
-    background-size: 830px auto;
-  }
-
-  &-nob{
-    position: absolute;
-    width: 10rem;
-    height: 6.5rem;
-    margin-left: -5rem; // to put this center
-    left:50%;
-    bottom: -2rem;
-    cursor: pointer;
-    background:
-      -webkit-linear-gradient(45deg, transparent 10px, #2D2C2F 10px),
-      -webkit-linear-gradient(135deg, transparent 10px, #2D2C2F 10px),
-      -webkit-linear-gradient(225deg, transparent 10px, #2D2C2F 10px),
-      -webkit-linear-gradient(315deg, transparent 10px, #2D2C2F 10px);
-    background-position: bottom left, bottom right, top right, top left;
-    background-size: 51% 51%;
-    background-repeat: no-repeat;
-    border: 0;
-  }
-
-  &-nobImg{
-    display: block;
-    width: 7.5rem;
-    margin: .5rem auto;
-  }
-
-}
 
 .p-footer{
   background: $clr-footer;
