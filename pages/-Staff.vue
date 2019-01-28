@@ -3,97 +3,31 @@
     <div class="container">
       <h2 class="c-title">Staff</h2>
       <div class="staffs">
-        <div class="staffs_leader">
+        <div class="staffs_leader" v-if="cheafs.length">
           <p class="staffs_post" ><i class="material-icons">stars</i>実行委員長</p>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
+          <a class="staff_item" v-for="(cheaf,index) in cheafs" :key="index" v-bind="linkBinder(cheaf)">
+            <img v-if="cheaf.avatar_url" :src="cheaf.avatar_url" alt="">
+            <span>{{cheaf.name}}</span>
+          </a>
+        </div>
+        <div v-if="cores.length">
+          <span class="staffs_post" ><i class="material-icons">account_circle</i>コアスタッフ</span>
+          <div class="staffs_core">
+            <a class="staff_item" v-for="(core,index) in cores" :key="index" v-bind="linkBinder(core)">
+              <img v-if="core.avatar_url" :src="core.avatar_url" alt="">
+              <img v-else src="~/assets/images/icon_default.png" alt="">
+              <span>{{core.name}}</span>
+            </a>
           </div>
         </div>
-        <span class="staffs_post" ><i class="material-icons">account_circle</i>コアスタッフ</span>
-        <div class="staffs_core">
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-        </div>
-        <span class="staffs_post" ><i class="material-icons">supervised_user_circle</i>当日スタッフ</span>
-        <div class="staffs_day">
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
-          </div>
-          <div class="staff_item">
-            <img src="https://via.placeholder.com/150" alt="">
-            <span>田中太郎</span>
+        <div v-if="onthedoors.length">
+          <span class="staffs_post" ><i class="material-icons">supervised_user_circle</i>当日スタッフ</span>
+          <div class="staffs_day" rel="noopener">
+            <a class="staff_item" v-for="(onthedoor,index) in onthedoors" :key="index" v-bind="linkBinder(onthedoor)">
+              <img v-if="onthedoor.avatar_url" :src="onthedoor.avatar_url" alt="">
+              <img v-else src="~/assets/images/icon_default.png" alt="">
+              <span>{{onthedoor.name}}</span>
+            </a>
           </div>
         </div>
       </div>
@@ -103,7 +37,40 @@
 
 <script>
   export default {
-    name: "Staff"
+    name: "Staff",
+    props:{
+      staffs: {
+        type: Object,
+        required: true
+      }
+    },
+    computed: {
+      cheafs(){
+        return this.staffs["実行委員長"] || []
+      },
+      cores(){
+        return this.staffs["コアスタッフ"] || []
+      },
+      onthedoors(){
+        return this.staffs["当日スタッフ"] || []
+      }
+    },
+    methods:{
+      linkBinder(staff){
+        if(staff.url){
+          return {
+            href: staff.url,
+            target: "_blank",
+            rel: "noopener"
+          }
+        }else{
+          return {
+
+          }
+        }
+
+      }
+    }
   }
 </script>
 
@@ -135,6 +102,7 @@
       padding: 0 10px;
       text-align: center;
       box-sizing: border-box;
+      color: inherit;
       img {
         margin: 0 auto 4px;
         border-radius: 50%;

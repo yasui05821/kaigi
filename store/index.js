@@ -39,13 +39,7 @@ export const actions = {
   },
   async fetchStaffs(){
     const {data} = await this.$axios.get("/staff")
-    const staffs = []
-    for (let title of Object.keys(data.staff)) {
-      for(let staff of data.staff[title]) {
-        staffs.push(staff)
-      }
-    }
-    return staffs
+    return data.staff
   },
   async fetchNews(){
     const {data} = await this.$axios.get("/news")

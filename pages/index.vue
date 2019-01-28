@@ -11,7 +11,7 @@
     <sec-news id="news" :news="news"></sec-news>
     <sec-about id="about"></sec-about>
     <sec-sponsor id="sponsor" :sponsors="sponsors"></sec-sponsor>
-    <sec-staff></sec-staff>
+    <sec-staff :staffs="staffs"/>
     <div class="footer_wrap">
       <p-footer></p-footer>
     </div>
